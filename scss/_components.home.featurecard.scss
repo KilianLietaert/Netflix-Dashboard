@@ -1,0 +1,9 @@
+.c-home-featurecard {
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: $border-radius__card;
+  padding: 3rem;
+  &__title {
+    font-size: $font-size18;
+  }
+}
