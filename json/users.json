@@ -1,0 +1,266 @@
+{"users":[
+    {
+        "id": 1,
+        "firstName": "Lien",
+        "lastName": "Stevens",
+        "title": "Mevr.",
+        "username": "Lienste",
+        "email": "lien.stevens@howest.be",
+        "dateOfBirth": "1984-06-24T15:45:26.625Z",
+        "address":
+        {
+            "street": "Graaf Karel De Goedelaan",
+            "houseNumber": "5",
+            "city": "Kortrijk",
+            "zipCode": "8500",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 254 06 87"
+            },
+            {
+              "type": "mobile",
+              "number": "0478 45 26 12"
+            }
+        ],
+        "created": "2018-05-12T10:40:26.455Z",
+        "plan": "premium",
+        "status": "active",
+        "lastLogin": "2020-11-24T16:48:36.455Z",
+        "paymentMethod": "Credit Card"
+    },
+    {
+        "id": 2,
+        "firstName": "Angelo",
+        "lastName": "Fallein",
+        "title": "Dhr.",
+        "username": "Angelo",
+        "email": "angelo.fallein@howest.be",
+        "dateOfBirth": "1987-05-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Kortrijk",
+            "zipCode": "8500",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 154 26 87"
+            },
+            {
+              "type": "mobile",
+              "number": "0474 22 26 12"
+            }
+        ],
+        "created": "2017-07-12T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "active",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Paypal"
+    },
+    {
+        "id": 3,
+        "firstName": "Mario",
+        "lastName": "Dakhil",
+        "title": "Dhr.",
+        "username": "dakhilmario",
+        "email": "mario.dakhil@student.howest.be",
+        "dateOfBirth": "1995-07-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-antoniusstraat",
+            "houseNumber": "83",
+            "city": "Kortrijk",
+            "zipCode": "8500",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": ""
+            },
+            {
+              "type": "Pc",
+              "number": "0474 55 02 12"
+            }
+        ],
+        "created": "2019-08-12T10:40:26.455Z",
+        "plan": "Basic",
+        "status": "Trial",
+        "lastLogin": "2020-02-24T16:48:36.455Z",
+        "paymentMethod": "Credit Card"
+    },
+    {
+        "id": 4,
+        "firstName": "Michel",
+        "lastName": "Van Autrève",
+        "title": "Dhr.",
+        "username": "michelvanautreve",
+        "email": "Michel.Van.Autreve@student.howest.be",
+        "dateOfBirth": "1998-07-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Kortrijk",
+            "zipCode": "8500",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 154 26 87"
+            },
+            {
+              "type": "mobile",
+              "number": "0474 22 26 12"
+            }
+        ],
+        "created": "2017-07-12T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "active",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Paypal"
+    },
+    {
+        "id": 5,
+        "firstName": "Amie",
+        "lastName": "Glenn",
+        "title": "Mevr.",
+        "username": "amieglenn",
+        "email": "amieglenn@gmail.com",
+        "dateOfBirth": "1992-05-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Berlin",
+            "zipCode": "10115",
+            "country": "Germany"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 154 26 87"
+            },
+            {
+              "type": "pc",
+              "number": "0974 22 26 12"
+            }
+        ],
+        "created": "2018-12-05T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "active",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Paypal"
+    },
+    {
+        "id": 6,
+        "firstName": "Kilian",
+        "lastName": "Lietaert",
+        "title": "Dhr.",
+        "username": "kilianlietaert",
+        "email": "kilian.lietaert@student.howest.be",
+        "dateOfBirth": "1996-09-25T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Kortrijk",
+            "zipCode": "8500",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": ""
+            },
+            {
+              "type": "mobile",
+              "number": "0474 22 48 25"
+            }
+        ],
+        "created": "2019-01-19T10:40:26.455Z",
+        "plan": "Premium",
+        "status": "active",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Paypal"
+    },
+    {
+        "id": 7,
+        "firstName": "Nathan",
+        "lastName": "Coppens",
+        "title": "Dhr.",
+        "username": "coppensnathan",
+        "email": "nathan.coppens@student.howest.be",
+        "dateOfBirth": "2000-11-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Gent",
+            "zipCode": "9000",
+            "country": "Belgium"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 154 26 87"
+            },
+            {
+              "type": "mobile",
+              "number": "0474 22 26 12"
+            }
+        ],
+        "created": "2017-11-12T10:40:26.455Z",
+        "plan": "Basic",
+        "status": "active",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Credit Card"
+    },
+    {
+        "id": 8,
+        "firstName": "Alexia",
+        "lastName": "Martin",
+        "title": "Mevr.",
+        "username": "alexia21",
+        "email": "alexia21@gmail.com",
+        "dateOfBirth": "1987-05-12T10:41:06.605Z",
+        "address":
+        {
+            "street": "Sint-Martens-Latemlaan",
+            "houseNumber": "2B",
+            "city": "Rome",
+            "zipCode": "00118 ",
+            "country": "Italy"
+        },
+        "phoneNumber":
+        [
+            {
+              "type": "fixed",
+              "number": "056 154 26 87"
+            },
+            {
+              "type": "pc",
+              "number": "0474 22 26 12"
+            }
+        ],
+        "created": "2016-12-12T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "Trial",
+        "lastLogin": "2020-09-24T16:48:36.455Z",
+        "paymentMethod": "Paypal"
+    }
+]}
