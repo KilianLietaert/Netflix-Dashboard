@@ -1,0 +1,19 @@
+.c-home-avatar {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  &__img {
+    height: 7.7rem;
+    width: auto;
+  }
+  &__greeting {
+    font-weight: 400;
+    font-size: $font-size20;
+    margin: 0 0 0 2.7rem;
+    padding: 0;
+  }
+  &__message {
+    font-size: $font-size24;
+    font-weight: 700;
+  }
+}
