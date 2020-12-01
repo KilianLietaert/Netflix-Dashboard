@@ -1,38 +1,32 @@
 {
-  "name": "Netflix-Dashboard",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
+  "name": "netflixdasboard",
+  "version": "1.0.0",
+  "description": "Uitwerking dashboard Netflix voor Fast Forward",
+  "private": "true",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "clean": "rimraf dist",
+    "compile": "node-sass --output-style=expanded --source-map=true scss/screen.scss dist/screen.css",
+    "prefix": "postcss dist/screen.css -u postcss-prefixer -o dist/screen.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/screen.min.css dist/screen.css",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify && webpack"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "Groep 1",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.2.0",
+    "postcss-prefixer": "^2.1.2",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@popperjs/core": "^2.5.4",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.16.1"
   }
 }
