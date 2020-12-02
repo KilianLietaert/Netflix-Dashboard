@@ -10753,8 +10753,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-*,
-html {
+* {
   margin: 0;
   padding: 0;
 }
@@ -10771,6 +10770,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
 
 .c-footer {
   background-color: #151515;
@@ -10808,10 +10809,11 @@ html {
   display: flex;
   align-items: center;
   padding-top: 3rem;
+  color: #fff;
 }
 
 .c-home-avatar__img {
-  height: 7.7rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -10825,6 +10827,21 @@ html {
 .c-home-avatar__message {
   font-size: 2.4rem;
   font-weight: 700;
+}
+
+.c-home-featurecard {
+  background-color: #151515;
+  color: #fff;
+  border-radius: 2.5rem;
+  padding: 3rem;
+}
+
+.c-home-featurecard__title {
+  font-size: 1.8rem;
+}
+
+.u-db--6 {
+  margin-bottom: 6rem;
 }
 
 /*# sourceMappingURL=screen.css.map */
