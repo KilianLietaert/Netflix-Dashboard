@@ -1,2 +1,9 @@
 .vscode/
-.DS_Store/
+.DS_Store
+node_modules/
+package.json
+dist/
+dist/screen.css
+dist/screen.css.map
+
+
