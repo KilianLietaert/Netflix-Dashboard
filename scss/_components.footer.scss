@@ -1,0 +1,30 @@
+.c-footer{
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12,auto);
+
+    @include media-breakpoint-down(lg){
+        display: block;
+        
+    }
+
+    h2{
+        @include media-breakpoint-down(lg){
+           font-size:  1.8rem;
+           padding: 1rem 0;
+        }
+    }
+
+    &__rights{
+        grid-column-start: 9;
+    }
+    &__helpdesk{
+        color: $color-red;
+        grid-column-end: 11;
+    }
+
+}
