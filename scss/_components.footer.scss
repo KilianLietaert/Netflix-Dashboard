@@ -16,15 +16,18 @@
         @include media-breakpoint-down(lg){
            font-size:  1.8rem;
            padding: 1rem 0;
+
         }
     }
 
     &__rights{
         grid-column-start: 9;
+        margin: auto 0;
     }
     &__helpdesk{
         color: $color-red;
         grid-column-end: 11;
+        margin: auto 0;
     }
 
 }

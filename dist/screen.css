@@ -10771,7 +10771,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body {
+  background-color: #262626;
+}
 
 .c-footer {
   background-color: #151515;
@@ -10798,11 +10800,13 @@ html {
 
 .c-footer__rights {
   grid-column-start: 9;
+  margin: auto 0;
 }
 
 .c-footer__helpdesk {
   color: #e21221;
   grid-column-end: 11;
+  margin: auto 0;
 }
 
 .c-home-avatar {
