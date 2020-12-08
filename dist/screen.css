@@ -10771,8 +10771,38 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #262626;
+
+
+.c-footer {
+  background-color: #151515;
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+}
+
+@media (max-width: 1199.98px) {
+  .c-footer {
+    display: block;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .c-footer h2 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+}
+
+.c-footer__rights {
+  grid-column-start: 9;
+}
+
+.c-footer__helpdesk {
+  color: #e21221;
+  grid-column-end: 11;
 }
 
 .c-home-avatar {
