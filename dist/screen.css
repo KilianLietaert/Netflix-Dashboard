@@ -10771,7 +10771,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body {
+  background-color: #262626;
+}
 
 .c-footer {
   background-color: #151515;
@@ -10798,11 +10800,13 @@ html {
 
 .c-footer__rights {
   grid-column-start: 9;
+  margin: auto 0;
 }
 
 .c-footer__helpdesk {
   color: #e21221;
   grid-column-end: 11;
+  margin: auto 0;
 }
 
 .c-home-avatar {
@@ -10839,6 +10843,177 @@ html {
 
 .c-home-featurecard__title {
   font-size: 1.8rem;
+}
+
+.c-users {
+  color: #fff;
+  margin-bottom: 9rem;
+}
+
+.c-users__title {
+  font-size: 3.5rem;
+  margin: 2rem 0 3.8rem 2rem;
+}
+
+@media (max-width: 1199.98px) {
+  .c-users table, .c-users thead, .c-users tbody, .c-users th, .c-users tr, .c-users td {
+    display: block;
+  }
+}
+
+.c-users__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0rem 1.8rem;
+}
+
+@media (max-width: 1199.98px) {
+  .c-users__table-head tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
+
+.c-users__table-head th {
+  background-color: #151515;
+  padding: 2rem 2rem;
+  font-size: 1.8rem;
+}
+
+.c-users__table-head th:first-child {
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+}
+
+.c-users__table-head th:last-child {
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
+.c-users__table-body tr {
+  background-color: #151515;
+  transition: all .4s;
+  border-radius: 17px;
+}
+
+@media (min-width: 1200px) {
+  .c-users__table-body tr:hover {
+    background-color: #292929;
+  }
+}
+
+.c-users__table-body td {
+  padding: 3rem 2rem;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 1688px) {
+  .c-users__table-body td {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .c-users__table-body td {
+    position: relative;
+    padding-left: 42%;
+    margin: 2rem 0;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-users__table-body td {
+    font-size: 1.6rem;
+    padding-left: 35%;
+  }
+}
+
+.c-users__table-body td::before {
+  /* Now like a table header */
+  position: absolute;
+  /* Top/left values mimic padding */
+  left: 1rem;
+  width: 45%;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .c-users__table-body td:nth-of-type(1):before {
+    content: "ID :";
+  }
+  .c-users__table-body td:nth-of-type(2):before {
+    content: "Name :";
+  }
+  .c-users__table-body td:nth-of-type(3):before {
+    content: "E-mail :";
+  }
+  .c-users__table-body td:nth-of-type(4):before {
+    content: "Plan :";
+  }
+  .c-users__table-body td:nth-of-type(5):before {
+    content: "Country :";
+  }
+  .c-users__table-body td:nth-of-type(6):before {
+    content: "Joined in :";
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-users__table-body td:first-child {
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+  }
+  .c-users__table-body td:last-child {
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .c-users__table .c-users__table-edit {
+    margin: -2rem 0;
+    display: inline-block;
+    font-size: 3rem;
+    padding-left: 12rem;
+    border-bottom: none;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-users__table .c-users__table-edit {
+    font-size: 2.5rem;
+    padding-left: 8rem;
+  }
+}
+
+.c-users__table .c-users__table-edit i {
+  color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+  .c-users__table .c-users__table-del {
+    margin: -2rem 0;
+    display: inline-block;
+    font-size: 3rem;
+    padding-left: 12rem;
+    border-bottom: none;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-users__table .c-users__table-del {
+    font-size: 2.5rem;
+    padding-left: 8rem;
+  }
+}
+
+.c-users__table .c-users__table-del i {
+  color: #e21221;
 }
 
 .u-db--6 {
