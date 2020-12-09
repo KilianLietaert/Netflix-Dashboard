@@ -15,8 +15,8 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="dist/screen.css" />
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="dist/main.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 </head>
 <body>
     <header>
@@ -47,20 +47,24 @@
                     </article>
                 </div>
                 <div class="col-4">
-                    <article class="">
-                        <div class="c-home-featurecard">
-                            <h2 class="c-home-featurecard__title" style="height:5rem;">Top 5 global</h2>
-                        </div>
+                    <article class="c-home-featurecard">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="c-home-featurecard__title">Top 5 global</h2>
+                                <div class="btn-group btn-group-toggle o-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                    <input type="radio" name="movies_series" id="movies" autocomplete="off" checked> Movies
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                    <input type="radio" name="movies_series" id="series" autocomplete="off"> Series
+                                    </label>
+                                </div>
+                            </div>
                     </article>
-                    <article class="">
-                        <div class="c-home-featurecard">
+                    <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Active users</h2>
-                        </div>
                     </article>
-                    <article class=" ">
-                        <div class="c-home-featurecard">
+                    <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
-                        </div>
                     </article>
                 </div>
             </div>    

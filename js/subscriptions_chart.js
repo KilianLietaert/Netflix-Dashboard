@@ -1,3 +1,7 @@
+var options = {
+  seriesBarDistance: 15
+};
+
 new Chartist.Bar('.ct-chart', {
   labels: ['Basic', 'Standard', 'Premium'],
   series: [
@@ -16,10 +20,4 @@ new Chartist.Bar('.ct-chart', {
     },
     scaleMinSpace: 15
   }
-});
-  
-  var options = {
-    seriesBarDistance: 15
-  };
-  
-  new Chartist.Bar('.ct-chart', data, options);
+}, options);

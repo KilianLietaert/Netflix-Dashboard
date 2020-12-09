@@ -11017,6 +11017,30 @@ body {
   color: #e21221;
 }
 
+.o-toggle {
+  font-size: 2rem;
+}
+
+.o-toggle .focus {
+  box-shadow: none;
+}
+
+.o-toggle label {
+  border-radius: 10rem;
+  background-color: #292929;
+  border: none;
+  padding: 0.4rem 1.6rem;
+}
+
+.o-toggle label:active {
+  background-color: #292929;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: #e21221;
+}
+
 .u-db--6 {
   margin-bottom: 6rem;
 }
