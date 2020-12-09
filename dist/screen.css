@@ -11017,6 +11017,85 @@ body {
   color: #e21221;
 }
 
+.c-hitlist {
+  margin: 2rem 0 0 0;
+}
+
+.c-hitlist :not(:last-of-type) {
+  border-bottom: 1px solid #292929;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.c-hitlist__item {
+  list-style: none;
+}
+
+.c-hitlist__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.1rem 0;
+}
+
+.c-hitlist__link:hover {
+  color: #e21221;
+  text-decoration: none;
+  stroke: #e21221;
+  background-color: #1d1c1c;
+}
+
+.c-hitlist__link:hover .c-hitlist__svg {
+  stroke: #e21221;
+}
+
+.c-hitlist__img {
+  width: 5rem;
+}
+
+.c-hitlist__title {
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.c-hitlist__title span {
+  display: block;
+}
+
+.c-hitlist__svg {
+  stroke: white;
+}
+
+.o-toggle {
+  font-size: 2rem;
+  max-height: 2.3rem;
+}
+
+.o-toggle .focus {
+  box-shadow: none;
+}
+
+.o-toggle label {
+  border-radius: 10rem;
+  background-color: #292929;
+  border: none;
+  padding: 0.4rem 1.6rem;
+}
+
+.o-toggle label:active {
+  background-color: #292929;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: #e21221;
+}
+
 .u-db--6 {
   margin-bottom: 6rem;
 }
