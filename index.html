@@ -13,7 +13,9 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="dist/screen.css" />
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="dist/main.js"></script>
 </head>
 <body>
@@ -35,33 +37,33 @@
         </header>
         <div class="container">
             <div class="row">
-                <article class="col-7 offset-1">
-                    <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Subscriptions</h2>
-                        
-                    </div>
-                </article>
-                <article class="col-4">
-                    <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Top 5 global</h2>
-                    </div>
-                </article>
-                <article class="col-7 offset-1">
-                    <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
-                    </div>
-                </article>
-                <article class="col-4">
-                    <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Active users</h2>
-                    </div>
-                </article>
-                <article class="col-4 offset-8">
-                    <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
-                    </div>
-                </article>
-            </div>
+                <div class="col-7 offset-1">
+                    <article class="c-home-featurecard">
+                            <h2 class="c-home-featurecard__title">Subscriptions</h2>
+                            <div class="ct-chart ct-perfect-fourth"></div>
+                    </article>    
+                    <article class="c-home-featurecard">                        
+                            <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <article class="">
+                        <div class="c-home-featurecard">
+                            <h2 class="c-home-featurecard__title" style="height:5rem;">Top 5 global</h2>
+                        </div>
+                    </article>
+                    <article class="">
+                        <div class="c-home-featurecard">
+                            <h2 class="c-home-featurecard__title">Active users</h2>
+                        </div>
+                    </article>
+                    <article class=" ">
+                        <div class="c-home-featurecard">
+                            <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
+                        </div>
+                    </article>
+                </div>
+            </div>    
         </div>
     </main>
     <footer class="c-footer">
@@ -70,6 +72,6 @@
             <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
     
     </footer>
-    <script src="js/chart.js"></script>
+    <script src="js/subscriptions_chart.js"></script>
 </body>
 </html>
