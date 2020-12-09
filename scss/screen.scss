@@ -6,7 +6,8 @@
 @import "generic";
 
 @import "elements";
-@import "components.footer";
+@import "_components.header";
+@import "_components.footer";
 
 @import "components.home.avatar";
 @import "components.home.featurecard";

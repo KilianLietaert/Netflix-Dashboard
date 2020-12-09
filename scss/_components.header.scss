@@ -1,0 +1,66 @@
+$color-red: #E21221;
+
+
+.c-header{
+    position: fixed;
+    
+}
+
+.c-nav{
+    background-color: black;
+    border-radius: 0 15px 15px 0;
+    margin-top: 50px;
+
+    &-link{
+        //padding:35px 30px;
+    }
+
+    &-icon{
+        padding:35px 30px;
+        & svg{
+            width:30px;
+            height: auto;
+            fill: $color-red;
+            margin-left: 5px;
+            fill: $color-red;
+        }
+
+        &:hover{
+            border: $color-red 2px solid;
+            padding:33px 28px;
+
+            &:first-of-type{
+                border-top-right-radius: 15px;
+            }
+            &:last-of-type{
+                border-bottom-right-radius: 15px;
+            }
+        }
+
+        &__active{
+            background-color: #E21221;
+
+            & svg{
+                fill: white;
+            }
+
+            &:first-of-type{
+                border-top-right-radius: 15px;
+            }
+            &:last-of-type{
+                border-bottom-right-radius: 15px;
+            }
+        }
+    }
+}
+
+.c-logo{
+    background-color: black;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+    
+    & svg{
+    width: 100px;
+    height: auto;
+}
+}
