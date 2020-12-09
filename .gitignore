@@ -1,7 +1,5 @@
-.vscode/
+/.vscode/
 .DS_Store
-node_modules/
+/node_modules/
 package.json
-dist/
-dist/screen.css
-dist/screen.css.map
+/dist/
