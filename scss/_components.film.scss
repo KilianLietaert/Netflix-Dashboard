@@ -1,0 +1,178 @@
+.c-form__input[type=text]{
+    background-color: #262626;
+    border-color: #3C3C3C;
+    border-radius: 10px;
+    color: white;
+    &::placeholder{
+        color: white;
+    }
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+    &:focus{
+        border-color: #e21221;
+    }
+}
+
+.c-form__input1[type=text]{
+    background-color: #262626;
+    border-color: #e21221;
+    border-radius: 10px;
+    color: white;
+    &::placeholder{
+        color: white;
+    }
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+    &:focus{
+        border-color: #e21221;
+    }
+}
+
+.c-form__input3[type=text]{
+    background-color: #262626;
+    border-color: #3C3C3C;
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+        height: 40px;
+    &::placeholder{
+        color: white;
+    }
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+    &:focus{
+        border-color: #e21221;
+    }
+}
+
+.c-form__input2{
+    display: flex;
+    background-color: #262626;
+    border-color: #3C3C3C;
+    border-radius: 10px;
+    margin-top: 7px;
+    height: 60px;
+    color: white;
+    &::placeholder{
+        color: white;
+        border-color: #e21221;
+        border-radius: 2rem;
+    }
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+    .blokjes{
+        border-color: #e21221;
+        border-radius: 5px;
+        margin-right: 12px;
+    }
+}
+
+.c-form__inputmessage[type=text]{
+    background-color: #262626;
+    border-color: #3C3C3C;
+    height: 158px;
+    border-radius: 10px;
+        color: white;
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+}
+
+.c-form__label{
+    color: white;
+    font-size: 30px;
+    margin-bottom: -4px;
+    
+}
+
+.c-film__kot{
+    background-color: #151515;
+    border-radius: 25px;
+}
+
+.c-form__title{
+    margin-top: 55px;
+    margin-bottom: 41px;
+}
+
+.c-form__actors{
+}
+
+.c-form__description{
+    margin-top: 55px;
+    margin-bottom: 42px;
+}
+
+.c-form__uploadcover{
+    margin-bottom: 29px;
+}
+
+.c-film__input{
+    color: white;
+    font-size: 50px;
+    margin-top: 61px;
+    margin-bottom: 74px;
+}
+
+.btn-blokjes{
+    border-color: #e21221;
+    border-radius: 10px;
+    background-color: #262626;
+    color: white;
+    border-width: 1px;
+    margin-top: 4px;
+}
+
+.btn-johny{
+    border-color: #e21221;
+    border-radius: 10px;
+    background-color: #262626;
+    color: white;
+    border-width: 1px;
+    margin-top: 4px;
+}
+
+.c-form__label--active{
+    border-color: #e21221;
+}
+
+.btn-save{
+    border-radius: 100px;
+    background-color: #e21221;
+    color: white;
+    width: 120px;
+    height: 70px;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    padding-top: 10px;
+}
+
+.saveknop{
+    text-align: right;
+}
+
+.uploadknop{
+    background-color: #e21221;
+    width: 90px;
+    height: 40px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+
+}
+
+.uploadvolledig{
+    display: flex;
+}
+
+svg{
+    padding-top: 10px;
+}
