@@ -10839,6 +10839,7 @@ body {
   border-radius: 2.5rem;
   padding: 3rem;
   margin-bottom: 3rem;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
 .c-home-featurecard__title {
