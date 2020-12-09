@@ -6,7 +6,12 @@
 @import "generic";
 
 @import "elements";
+<<<<<<< Updated upstream
 @import "components.footer";
+=======
+@import "_components.header";
+@import "_components.footer";
+>>>>>>> Stashed changes
 
 @import "components.home.avatar";
 @import "components.home.featurecard";
