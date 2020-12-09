@@ -1,0 +1,189 @@
+.c-users{
+
+    color: $color-white;
+    margin-bottom: 9rem;
+
+    &__title{
+        font-size: 3.5rem;
+        
+        margin: 2rem 0 3.8rem 2rem;
+    }
+    
+    table, thead, tbody, th, tr, td{
+        @include media-breakpoint-down(lg){
+            display: block;
+        }
+    }
+
+    &__table{
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0rem 1.8rem;
+
+
+
+        &-head{
+
+            tr{
+                @include media-breakpoint-down(lg){
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+            }
+
+            th{
+                background-color: $color-black;
+                padding: 2rem 2rem;
+                font-size: $font-size18;
+
+                &:first-child{
+                    border-top-left-radius: 17px;
+                    border-bottom-left-radius: 17px;
+                }
+    
+                &:last-child{
+                    border-top-right-radius: 17px;
+                    border-bottom-right-radius: 17px;
+                }
+            }//end th
+
+        } //end head
+
+
+        &-body{
+           tr{
+            background-color: $color-black;
+            transition: all .4s;
+
+           
+                &:hover{
+                     @include media-breakpoint-up(xl){
+                        background-color: $color-grey--light;
+                     }
+                }
+
+
+                    border-radius: 17px;
+ 
+
+
+           }
+
+
+            td{
+                // background-color: $color-black;
+                padding: 3rem 2rem;
+                font-size: $font-size18;
+
+
+                @include media-breakpoint-up(xxl){
+                    font-size: 2.2rem;
+                }
+
+                @include media-breakpoint-down(lg){
+                    position: relative;
+                    padding-left: 42%; 
+                    margin: 2rem 0;
+                    border-bottom: 1px solid $color-white;
+
+                }
+
+                @include media-breakpoint-down(sm){
+                    font-size: 1.6rem;
+                    padding-left: 35%;
+                }
+
+                &::before{
+                    /* Now like a table header */
+                    position: absolute;
+                    /* Top/left values mimic padding */
+                    
+                    left: 1rem;
+                    width: 45%; 
+                    padding-right: 10px; 
+                    white-space: nowrap;
+                }
+
+                @include media-breakpoint-down(lg){
+                    &:nth-of-type(1):before { content: "ID :"; }
+                    &:nth-of-type(2):before { content: "Name :"; }
+                    &:nth-of-type(3):before { content: "E-mail :"; }
+                    &:nth-of-type(4):before { content: "Plan :"; }
+                    &:nth-of-type(5):before { content: "Country :"; }
+                    &:nth-of-type(6):before { content: "Joined in :"; }
+                }
+
+                
+                
+                @include media-breakpoint-up(xl){
+                    &:first-child{
+                        border-top-left-radius: 17px;
+                        border-bottom-left-radius: 17px;
+                    }
+
+                    &:last-child{
+                        border-top-right-radius: 17px;
+                        border-bottom-right-radius: 17px;
+                    }
+                }
+
+
+
+
+            }
+
+        }//end body
+
+        .c-users__table-edit{
+           
+
+            @include media-breakpoint-down(lg){
+                margin: -2rem 0;
+                display: inline-block;
+                font-size: 3rem;
+                padding-left: 12rem;
+                border-bottom: none;
+                padding-top: 1rem;
+            
+            }
+
+            @include media-breakpoint-down(sm){
+                font-size: 2.5rem;
+                padding-left: 8rem;
+            }
+           
+            i{
+                color: $color-white;
+
+            }
+        }
+
+        .c-users__table-del{
+            @include media-breakpoint-down(lg){
+                margin: -2rem 0;
+                display: inline-block;
+                font-size: 3rem;
+                padding-left: 12rem;
+                border-bottom: none;
+                padding-top: 1rem;
+            
+            }
+
+
+            @include media-breakpoint-down(sm){
+                font-size: 2.5rem;
+                padding-left: 8rem;
+            }
+
+            i{
+                color: $color-red;
+            }
+        }
+
+    } //end table
+
+
+
+    
+}// end c-users
