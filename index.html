@@ -13,10 +13,9 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="dist/screen.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="dist/main.js"></script>
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 </head>
 <body>
     <header>
@@ -40,7 +39,7 @@
                 <div class="col-12 col-lg-7 offset-lg-1">
                     <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Subscriptions</h2>
-                            <div class="ct-chart ct-perfect-fourth"></div>
+                            <canvas id="myChart"></canvas>
                     </article>    
                     <article class="c-home-featurecard">                        
                             <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
@@ -113,6 +112,5 @@
             <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
     
     </footer>
-    <script src="js/subscriptions_chart.js"></script>
 </body>
 </html>
