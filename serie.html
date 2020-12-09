@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix - Serie</title>
     <script src="https://kit.fontawesome.com/61efba2fcb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="dist/screen.css" />
+    <link rel="stylesheet" href="css/screen.css" />
 </head>
 <body>
     <header>
@@ -11,35 +11,38 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                    <div class="col-lg-1 col-md-1"></div>
-                    <div class="col-lg-11 col-md-11">
+                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-lg-11 col-md-11 col-sm-11">
                 <div class="c-film">
                 <h1 class="c-film__input">Input Series</h1>
                 <div class="c-film__kot ">
                         <div class="c-contact row">
-                            <div class="col-lg-1 col-md-1"></div>
-                            <div class="col-lg-4 col-md-10 c-contact__form">
+                            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                            <div class="col-lg-4 col-md-10 col-sm-10 c-contact__form">
                                 
                                 <form class="c-form">
                                     <div class="form-group c-form__title2">
                                         <label class="c-form__label" for="title">
                                             Title
                                         </label>
-                                        <input required type="text" class="form-control c-form__input1" id="title" />
+                                        <input required type="text" class="form-control c-form__input1 " id="title" />
 
                                     </div>
                                     <div class="form-group c-form__categories">
                                         <label class="c-form__label" for="categories" >
                                             Add to
                                         </label>
-                                        <input required type="text" class="form-control c-form__input" id="categories" />
+                                        <input required type="text" class="form-control c-form__input5" id="categories" />
                                     
                                     </div>
                                     <div class="form-group c-form__categories">
                                         <label class="c-form__label" for="categories" >
                                             Categories
                                         </label>
+                                        <div class="addknopvolledig">
                                         <input required type="text" class="form-control c-form__input" placeholder="Action" id="categories" />
+                                        <div class="addknop"><a href=""><h2>+</h2></a></div></div>
+                                
                                     
                                         <div class="form-control c-form__input2">
                                             <div class="action blokjes"><a class="btn-blokjes btn" href="#drama">Action</a></div>
@@ -51,25 +54,29 @@
                                         <label class="c-form__label" for="actors">
                                             Actors
                                         </label>
-                                        <input required type="text" class="form-control c-form__input" placeholder="Johny Depp" id="actors" />
+                                        <div class="addknopvolledig">
+                                            <input required type="text" class="form-control c-form__input" placeholder="Johny Depp" id="actors" />
+                                            <div class="addknop"><a href=""><h2>+</h2></a></div></div>
                                         <div class="form-control c-form__input2">
                                         <div class="drama blokjes"><a class="btn-blokjes btn" href="#drama">Johny Depp</a></div>
                                     </div></div></div>
-                                    <div class="col-lg-1 col-md-1"></div>
-                                    <div class="col-lg-5 col-md-10">
+                                    <div class="weg col-md-1 col-sm-1"></div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                    <div class="col-lg-5 col-md-10 col-sm-10">
                                     <div class="form-group c-form__description">
                                         <label class="c-form__label c-form__label--message">
                                             Description
                                         </label>
-                                        <input required type="text" class="form-control c-form__inputmessage" id="actors" />
+                                        <textarea class="form-control c-form__inputmessage" id="w3review" type="text" name="w3review" rows="5" cols="50">
+                                            </textarea>
                                     </div>
                                     <div class="form-group c-form__uploadcover">
-                                        <label class="c-form__label" for="uploadcover">
+                                        <label class="c-form__label2" for="uploadcover">
                                             Upload Cover
                                         </label>
                                         <div class="uploadvolledig">
-                                        <input required type="text" class="form-control c-form__input3" id="uploadcover" />
-                                        <div class="uploadknop"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
+                                            <div class="form-control c-form__input3"></div>
+                                        <div class="uploadknop"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
                                             <g id="upload" transform="translate(-16)">
                                               <g id="Group_2" data-name="Group 2" transform="translate(23.968)">
                                                 <g id="Group_1" data-name="Group 1">
@@ -82,17 +89,17 @@
                                                 </g>
                                               </g>
                                             </g>
-                                          </svg>
+                                          </svg></a>
                                           </div></div>
 
                                     </div>
                                     <div class="form-group c-form__uploadmovie">
-                                        <label class="c-form__label" for="uploadmovie">
+                                        <label class="c-form__label2" for="uploadmovie">
                                             Upload Movie
                                         </label>
                                         <div class="uploadvolledig">
-                                            <input required type="text" class="form-control c-form__input3" id="uploadcover" />
-                                            <div class="uploadknop"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
+                                            <div class="form-control c-form__input3"></div>
+                                            <div class="uploadknop"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
                                                 <g id="upload" transform="translate(-16)">
                                                   <g id="Group_2" data-name="Group 2" transform="translate(23.968)">
                                                     <g id="Group_1" data-name="Group 1">
@@ -105,7 +112,7 @@
                                                     </g>
                                                   </g>
                                                 </g>
-                                              </svg>
+                                              </svg></a>
                                               </div></div>
 
                                     </div>

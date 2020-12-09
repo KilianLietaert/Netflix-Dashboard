@@ -1,7 +1,7 @@
 .c-form__input[type=text]{
     background-color: #262626;
     border-color: #3C3C3C;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     color: white;
     &::placeholder{
         color: white;
@@ -11,9 +11,30 @@
     border-color: #e21221;
     }
     &:focus{
-        border-color: #e21221;
+        outline: none;
     }
+
 }
+
+.c-form__input5[type=text]{
+    background-color: #262626;
+    border-color: #3C3C3C;
+    color: white;
+
+    border-radius: 10px;
+    &::placeholder{
+        color: white;
+    }
+    &:hover,
+    &:active {
+    border-color: #e21221;
+    }
+    &:focus{
+        outline: none;
+    }
+
+}
+
 
 .c-form__input1[type=text]{
     background-color: #262626;
@@ -28,16 +49,15 @@
     border-color: #e21221;
     }
     &:focus{
-        border-color: #e21221;
+        outline: none;
     }
 }
-
-.c-form__input3[type=text]{
+.c-form__inputfilm[type=text]{
     background-color: #262626;
-    border-color: #3C3C3C;
-    border-radius: 10px 0px 0px 10px;
+    border-color: #e21221;
+    border-radius: 10px;
     color: white;
-        height: 40px;
+    margin-bottom: 45px;
     &::placeholder{
         color: white;
     }
@@ -46,8 +66,25 @@
     border-color: #e21221;
     }
     &:focus{
-        border-color: #e21221;
+        outline: none;
     }
+    @include media-breakpoint-up(md){
+        margin-bottom: 0px;
+            }
+            @include media-breakpoint-up(sm){
+                margin-bottom: 0px;
+                    }
+                    @include media-breakpoint-up(lg){
+                        margin-bottom: 45px;
+                            }
+}
+
+.c-form__input3{
+    background-color: #262626;
+    border-color: #3C3C3C;
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+        height: 40px;
 }
 
 .c-form__input2{
@@ -71,6 +108,7 @@
         border-color: #e21221;
         border-radius: 5px;
         margin-right: 12px;
+
     }
 }
 
@@ -90,6 +128,23 @@
     color: white;
     font-size: 30px;
     margin-bottom: -4px;
+
+}
+
+.c-form__label2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: -4px;
+    margin-top: 29px;
+    @include media-breakpoint-up(md){
+        margin-top: 9px;
+            }
+            @include media-breakpoint-up(sm){
+                margin-top: 9px;
+                    }
+                    @include media-breakpoint-up(lg){
+                        margin-top: 29px;
+                            }
     
 }
 
@@ -109,10 +164,28 @@
 .c-form__description{
     margin-top: 55px;
     margin-bottom: 42px;
+    @include media-breakpoint-up(md){
+margin-top: 0px;
+margin-bottom: 0px;
+    }
+    @include media-breakpoint-up(sm){
+        margin-top: 0px;
+        margin-bottom: 0px;
+            }
+
 }
 
 .c-form__uploadcover{
     margin-bottom: 29px;
+    @include media-breakpoint-up(md){
+        margin-top: 9px;
+        margin-bottom: 9px;
+            }
+            @include media-breakpoint-up(sm){
+                margin-top: 9px;
+                margin-bottom: 9px;
+                    }
+
 }
 
 .c-film__input{
@@ -129,6 +202,9 @@
     color: white;
     border-width: 1px;
     margin-top: 4px;
+    &:hover {
+        color: white;
+        }
 }
 
 .btn-johny{
@@ -142,6 +218,12 @@
 
 .c-form__label--active{
     border-color: #e21221;
+}
+
+.c-form__label--message{
+    @include media-breakpoint-up(lg){
+margin-top: 53px;
+            }
 }
 
 .btn-save{
@@ -175,4 +257,33 @@
 
 svg{
     padding-top: 10px;
+}
+
+.addknop{
+    background-color:#e21221;
+    border-width: 7px;
+    width: 50px;
+    height: 39px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    a{
+        text-decoration: none;
+        margin-bottom: 100px;
+    }
+    h2{
+        color: white;
+
+
+        
+    }
+}
+
+.addknopvolledig{
+    display: flex;
+}
+
+.weg{
+    @include media-breakpoint-up(lg){
+        display: none;
+                    }
 }
