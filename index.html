@@ -13,9 +13,8 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="dist/screen.css" />
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="dist/main.js"></script>
 </head>
 <body>
@@ -37,30 +36,71 @@
         </header>
         <div class="container">
             <div class="row">
-                <div class="col-7 offset-1">
+                <div class="col-12 col-lg-7 offset-lg-1">
                     <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Subscriptions</h2>
-                            <div class="ct-chart ct-perfect-fourth"></div>
+                            <canvas id="myChart"></canvas>
                     </article>    
                     <article class="c-home-featurecard">                        
                             <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
                     </article>
                 </div>
-                <div class="col-4">
-                    <article class="">
-                        <div class="c-home-featurecard">
-                            <h2 class="c-home-featurecard__title" style="height:5rem;">Top 5 global</h2>
-                        </div>
+                <div class="col-12 col-lg-4">
+                    <article class="c-home-featurecard">
+                            <div class="d-flex justify-content-between">
+                                <h2 class="c-home-featurecard__title">Top 5 global</h2>
+                                <div class="btn-group btn-group-toggle o-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                    <input type="radio" name="movies_series" id="movies" autocomplete="off" checked> Movies
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                    <input type="radio" name="movies_series" id="series" autocomplete="off"> Series
+                                    </label>
+                                </div>
+                            </div>
+                            <ul class="c-hitlist">
+                                <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
+                                    <img src="img/movie1.png" class="c-hitlist__img" alt="365 Days" />
+                                    <p class="c-hitlist__title">1. 354 Days<span>Movie</span></p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
+                                        <path id="PijlRechts" class="c-hitlist__svg"  d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </svg>
+                                </a></li>
+                                <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
+                                    <img src="img/movie2.png" class="c-hitlist__img" alt="Enola Holmes" />
+                                    <p class="c-hitlist__title">2. Enola Holmes<span>Movie</span></p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
+                                        <path id="PijlRechts" class="c-hitlist__svg" d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </svg>
+                                </a></li>
+                                <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
+                                    <img src="img/movie3.png" class="c-hitlist__img" alt="The Old Guard" />
+                                    <p class="c-hitlist__title">3. The Old Guard<span>Movie</span></p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
+                                        <path id="PijlRechts" class="c-hitlist__svg" d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </svg>
+                                </a></li>
+                                <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
+                                    <img src="img/movie4.png" class="c-hitlist__img" alt="The Social Dilemma" />
+                                    <p class="c-hitlist__title">4. The Social Dilemma<span>Movie</span></p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
+                                        <path id="PijlRechts" class="c-hitlist__svg" d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </svg>
+                                </a></li>
+                                <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
+                                    <img src="img/movie5.png" class="c-hitlist__img" alt="Project Power" />
+                                    <p class="c-hitlist__title">5. Project Power<span>Movie</span></p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
+                                        <path id="PijlRechts" class="c-hitlist__svg" d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                    </svg>
+                                </a></li>
+                            </ul>
                     </article>
-                    <article class="">
-                        <div class="c-home-featurecard">
+                    <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Active users</h2>
-                        </div>
                     </article>
-                    <article class=" ">
-                        <div class="c-home-featurecard">
+                    <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
-                        </div>
                     </article>
                 </div>
             </div>    
@@ -72,6 +112,5 @@
             <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
     
     </footer>
-    <script src="js/subscriptions_chart.js"></script>
 </body>
 </html>

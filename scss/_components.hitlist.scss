@@ -1,0 +1,44 @@
+.c-hitlist {
+  margin: 2rem 0 0 0;
+  :not(:last-of-type) {
+    border-bottom: 1px solid $color-grey--light;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+    border-radius: 1rem;
+    padding: 0.1rem 0;
+    &:hover {
+      color: $color-red;
+      text-decoration: none;
+      stroke: $color-red;
+      background-color: $color-grey--dark;
+      .c-hitlist__svg {
+        stroke: $color-red;
+      }
+    }
+  }
+  &__img {
+    width: 5rem;
+  }
+  &__title {
+    display: block;
+    width: 100%;
+    padding-left: 1rem;
+    margin: 0;
+    span {
+      display: block;
+    }
+  }
+  &__svg {
+    stroke: white;
+  }
+}

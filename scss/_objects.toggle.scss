@@ -1,0 +1,22 @@
+.o-toggle {
+  font-size: $font-size20;
+  max-height: 2.3rem;
+  .focus {
+    box-shadow: none;
+  }
+  label {
+    border-radius: 10rem;
+    background-color: $color-grey--light;
+    border: none;
+    padding: 0.4rem 1.6rem;
+    &:active {
+      background-color: $color-grey--light;
+    }
+  }
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  background-color: $color-red;
+}
