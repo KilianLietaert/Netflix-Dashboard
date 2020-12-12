@@ -46,6 +46,13 @@
                     border-top-right-radius: 17px;
                     border-bottom-right-radius: 17px;
                 }
+
+                i{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
             }//end th
 
         } //end head
@@ -59,7 +66,7 @@
            
                 &:hover{
                      @include media-breakpoint-up(xl){
-                        background-color: rgb(94, 94, 94);
+                        background-color: #000;
                      }
                 }
 
@@ -75,8 +82,8 @@
 
             td{
                 // background-color: $color-black;
-                padding: 1.5rem 2rem;
-                font-size: $font-size18;
+                padding: 1.5rem 1.7rem;
+                font-size: 1.6rem;
 
 
                 @include media-breakpoint-up(xxl){
@@ -158,13 +165,6 @@
                 }
             }
 
-            .edit-btn{
-                display: inline-block;
-
-                @include media-breakpoint-down(lg){
-                    display: none;
-                }
-            }
 
 
             @include media-breakpoint-down(sm){
@@ -191,15 +191,7 @@
             }
 
 
-            .delete-btn{
-
-                display: inline-block;
-                
-
-                @include media-breakpoint-down(lg){
-                    display: none;
-                }
-            }
+           
 
 
             //c-users__table-del small screen
