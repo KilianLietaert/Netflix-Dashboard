@@ -137,5 +137,41 @@
         "plan": "Standard",
         "status": "Trial",
         "lastLogin": "2020-09-24T16:48:36.455Z"
+    },
+    {
+        "id": 9,
+        "firstName": "Alexia",
+        "lastName": "Martin",
+        "username": "alexia21",
+        "email": "alexia21@gmail.com",
+        "address":
+        {
+            "city": "Rome",
+            "zipCode": "00118 ",
+            "country": "Italy"
+        },
+        
+        "created": "2016-12-12T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "Trial",
+        "lastLogin": "2020-09-24T16:48:36.455Z"
+    },
+    {
+        "id": 10,
+        "firstName": "Jeff",
+        "lastName": "Martin",
+        "username": "alexia21",
+        "email": "alexia21@gmail.com",
+        "address":
+        {
+            "city": "Florence",
+            "zipCode": "00118 ",
+            "country": "Italy"
+        },
+        
+        "created": "2016-12-12T10:40:26.455Z",
+        "plan": "Standard",
+        "status": "Trial",
+        "lastLogin": "2020-09-24T16:48:36.455Z"
     }
 ]}
