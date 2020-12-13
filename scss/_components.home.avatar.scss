@@ -3,9 +3,26 @@
   align-items: center;
   padding-top: 3rem;
   color: $color-white;
+  &--general {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.9rem;
+    background-color: $color-black;
+    border-bottom-left-radius: 25px;
+    box-shadow: $box-shadow__card;
+    @include media-breakpoint-down(xs) {
+      padding: 1rem;
+    }
+  }
   &__img {
     height: 7rem;
     width: auto;
+    &--general {
+      @include media-breakpoint-down(xs) {
+        height: 6rem;
+      }
+    }
   }
   &__greeting {
     font-weight: 400;
