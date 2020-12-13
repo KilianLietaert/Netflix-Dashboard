@@ -6,8 +6,8 @@
 @import "generic";
 
 @import "elements";
-@import "_components.header";
-@import "_components.footer";
+@import "components.header";
+@import "components.footer";
 
 @import "components.home.avatar";
 @import "components.home.featurecard";
@@ -20,3 +20,4 @@
 @import "objects.toggle";
 
 @import "utilities.distance";
+@import "utilities.fade";
