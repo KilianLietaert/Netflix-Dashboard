@@ -1,5 +1,6 @@
 .c-hitlist {
   margin: 2rem 0 0 0;
+  transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
   :not(:last-of-type) {
     border-bottom: 1px solid $color-grey--light;
     margin-bottom: 1.5rem;
@@ -11,7 +12,7 @@
   &__link {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: $color-white;
     border-radius: 1rem;
@@ -39,6 +40,8 @@
     }
   }
   &__svg {
+    display: block;
     stroke: white;
+    padding-right: 5rem;
   }
 }
