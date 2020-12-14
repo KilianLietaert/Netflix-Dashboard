@@ -1,17 +1,18 @@
 
 .c-header{
     position: fixed;
-    
+
 }
 
 .c-nav{
     background-color: $color-black;
     border-radius: 0 15px 15px 0;
     margin-top: 50px;
+    box-shadow: $box-shadow__card;
 
     &-link{
         padding:45px 30px;
-         
+
         &:hover{
             padding: 35px 30px;
         }
@@ -59,7 +60,7 @@
     background-color: $color-black;
     border-bottom-right-radius: 15px;
     overflow: hidden;
-    
+    box-shadow: $box-shadow__card;
     & svg{
     width: 100px;
     height: auto;
