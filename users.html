@@ -13,8 +13,12 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="dist/screen.css" />
     <script src="dist/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="/js/json-inladen.js"></script>
+    <script src="js/filter-menu.js"></script>
 </head>
 <body>
     <header>
@@ -30,7 +34,56 @@
         </header>
         <section class="c-users">
             <div class="container">
-            <h1 class="c-users__title">All users</h1>
+            
+
+            <div class="c-zoekcontainer">
+              <h1 class="c-users__title">All users</h1>
+              <div class="search-filter">
+              <div class="c-zoekcontainer__search">
+                <a href="#" class="c-zoekcontainer__icon"><i class="fas fa-search"></i></a>
+                <input type="text" class="c-zoekcontainer__input" placeholder="Search...">
+              </div>
+              <div class="c-zoekcontainer__filter js-filter-btn">
+                <span class="filter-text">Filter</span>
+                <span class="filter-icon"><i class="fas fa-sliders-h"></i></span>
+              </div>
+
+              </div> <!--end search filter-->
+            </div> <!--end c-zoekcontainer-->
+
+            <div class="c-filter js-filter-menu">
+              <label for="id" class="c-filter__item">
+                User ID:
+                <input type="number" placeholder="user ID" class="c-filter__input" id="id">
+              </label>
+
+              <label for="plan" class="c-filter__item">
+                Plan:
+              <Select id="plan" class="c-filter__select">
+                <option value="premium">Basic</option>
+                <option value="premium">Standard</option>
+                <option value="premium">Premium</option>
+              </Select>
+            </label>
+
+              <label for="country" class="c-filter__item">
+                Country:
+                <input id="country"  type="text" class="c-filter__input" placeholder="Country">
+              </label>
+
+              <label for="joindin" class="c-filter__item">
+                Joined between:
+                <input id="joindin" min="2007-01-01"  type="date" class="c-filter__input js-start-date">
+              </label>
+              <label for="enddate" class="c-filter__item">
+                and
+              <input id="enddate" min="2007-01-01"  type="date" class="c-filter__input js-end-date">
+            </label>
+
+            <button class="c-filter__btn">Filter</button>
+
+            </div><!--end c-filter-->
+
             <table class="c-users__table">
                 <thead class="c-users__table-head">
                   <tr>
@@ -43,7 +96,7 @@
                     <th colspan="2"></th>
                   </tr>
                 </thead>
-                <tbody class="c-users__table-body">
+                <tbody class="c-users__table-body js-table">
                   <tr>
                     <td>1</td>
                     <td>Lien Stevens</td>
@@ -51,39 +104,15 @@
                     <td>Premium</td>
                     <td>Belgium</td>
                     <td>22/08/2019</td>
-                    <td class="c-users__table-edit"><a href="#" title="Edit"><i class="fas fa-edit"></i></a></td>
-                    <td class="c-users__table-del"><a href="" title="Delete"><i class="fas fa-trash"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Angelo Fallein</td>
-                    <td>angelo.fallein@howest.be</td>
-                    <td>Standard</td>
-                    <td>Belgium</td>
-                    <td>20/05/2018</td>
-                    <td class="c-users__table-edit"><a href="#" title="edit"><i class="fas fa-edit"></i></a></td>
-                    <td class="c-users__table-del"><a href="" title="Delete"><i class="fas fa-trash"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Lien Stevens</td>
-                    <td>lien.stevens@howest.be</td>
-                    <td>Basic</td>
-                    <td>Germany</td>
-                    <td>22/08/2019</td>
-                    <td class="c-users__table-edit"><a href="#" title="Edit"><i class="fas fa-edit"></i></a></td>
-                    <td class="c-users__table-del"><a href="" title="Delete"><i class="fas fa-trash"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Angelo Fallein</td>
-                    <td>angelo.fallein@howest.be</td>
-                    <td>Premium</td>
-                    <td>Belgium</td>
-                    <td>20/05/2018</td>
-                    <td class="c-users__table-edit"><a href="#" title="Edit"><i class="fas fa-edit"></i></a></td>
-                    <td class="c-users__table-del"><a href="" title="Delete"><i class="fas fa-trash"></i></a></td>
-                  </tr>
+                    <td class="c-users__table-edit c-users__table-btn">
+                      <a href="#" class="edit-txt" >Edit</a>
+                      <a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
+                    </td>
+                    <td class="c-users__table-del c-users__table-btn">
+                      <a href="#" class="delete-txt" >Delete</a>
+                      <a href="#" class="delete-btn" title="Delete"><i class="fas fa-trash"></i></a>
+                    </td>
+                  
                 </tbody>
                 </table>
 
