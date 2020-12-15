@@ -25,6 +25,13 @@
       .c-hitlist__svg {
         stroke: $color-red;
       }
+      & > svg {
+        margin-right: 1rem;
+      }
+    }
+    & > svg {
+      margin-right: 1.5rem;
+      transition: margin-right 0.2s ease-out;
     }
   }
   &__img {
@@ -42,6 +49,5 @@
   &__svg {
     display: block;
     stroke: white;
-    padding-right: 5rem;
   }
 }
