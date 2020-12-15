@@ -11,7 +11,7 @@
     background-color: $color-black;
     border-bottom-left-radius: 25px;
     box-shadow: $box-shadow__card;
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(lg) {
       padding: 1rem;
     }
   }
@@ -19,7 +19,7 @@
     height: 7rem;
     width: auto;
     &--general {
-      @include media-breakpoint-down(xs) {
+      @include media-breakpoint-down(lg) {
         height: 6rem;
       }
     }
