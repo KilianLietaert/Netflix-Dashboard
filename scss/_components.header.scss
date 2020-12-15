@@ -8,6 +8,8 @@
         bottom: 0px;
         width: 100%;
         justify-content: center;
+        background-color: $color-black;
+        box-shadow: $box-shadow__card;
     }
 }
 
@@ -16,7 +18,7 @@
     border-radius: 0 15px 15px 0;
     margin-top: 50px;
     box-shadow: $box-shadow__card;
-    
+
     & ul{
     @include media-breakpoint-down(md){
         display: flex;
@@ -32,6 +34,11 @@
     }
     &-icon{
         padding:35px 2px;
+
+        @include media-breakpoint-down(sm){
+            padding: 15px 2px;
+        }
+
         & svg{
             width:30px;
             height: auto;
@@ -44,6 +51,10 @@
             border: $color-red 2px solid;
             padding:33px 0px;
 
+            @include media-breakpoint-down(sm){
+                padding: 13px 0px;
+            }
+
             &:first-of-type{
                 border-top-right-radius: 15px;
             }
@@ -52,6 +63,7 @@
             }
 
             @include media-breakpoint-down(md){
+
                 &:first-of-type{
                     border-top-right-radius: 0px;
                 }
@@ -88,7 +100,9 @@
 
     @include media-breakpoint-down(md){
         border-radius: 0 0 0 0;
-       
+        margin-top: 0;
+        box-shadow: none;
+        margin-bottom: -10px;
     }
 
 }
