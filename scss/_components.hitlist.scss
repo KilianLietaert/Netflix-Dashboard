@@ -42,8 +42,10 @@
     width: 100%;
     padding-left: 1rem;
     margin: 0;
+    font-size: $font-size13;
     span {
       display: block;
+      font-size: $font-size11;
     }
   }
   &__svg {
