@@ -7,5 +7,7 @@
   box-shadow: $box-shadow__card;
   &__title {
     font-size: $font-size18;
+    text-align: left;
+    align-self: flex-start;
   }
 }
