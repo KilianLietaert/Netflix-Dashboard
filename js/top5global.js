@@ -100,7 +100,7 @@ const showMedia = function(array, movieOrSerie){
             hitlistItem.innerHTML = `
             <a href="#" class="c-hitlist__link">
                 <img src="img/${array[index].info.img}" class="c-hitlist__img" alt="${array[index].info.title}" />
-                <p class="c-hitlist__title">${array[index].ranking}. ${array[index].info.title}<span>${movieOrSerie}</span></p>
+                <p class="c-hitlist__title">${array[index].ranking}.&nbsp; ${array[index].info.title}<span>${movieOrSerie}</span></p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
                     <path id="PijlRechts" class="c-hitlist__svg" d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
                 </svg>
