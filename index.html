@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="dist/main.js"></script>
     <script src="js/top5global.js"></script>
+    <script src="js/subscriptions_chart.js"></script>
+    <script src="js/active_users.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
 </head>
 
 <body>
@@ -319,8 +322,9 @@
                                 </a></li>
                             </ul>
                     </article>
-                    <article class="c-home-featurecard">
+                    <article class="c-home-featurecard c-active-users">
                             <h2 class="c-home-featurecard__title">Active users</h2>
+                            <canvas id="js-activeUsers"></canvas>
                     </article>
                     <article class="c-home-featurecard">
                             <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
