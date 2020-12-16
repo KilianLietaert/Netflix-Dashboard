@@ -6,7 +6,11 @@
     &__title{
         font-size: 3.5rem;
         
-        margin: 2rem 0 3.8rem 2rem;
+        margin: 2rem 0 0 2rem;
+
+        @include media-breakpoint-down(lg){
+            margin-bottom: 3.8rem;
+        }
     }
     
     table, thead, tbody, th, tr, td{
@@ -34,7 +38,7 @@
 
             th{
                 background-color: $color-black;
-                padding: 2rem 2rem;
+                padding: 1rem 2rem;
                 font-size: $font-size18;
 
                 &:first-child{
@@ -46,6 +50,13 @@
                     border-top-right-radius: 17px;
                     border-bottom-right-radius: 17px;
                 }
+
+                i{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+
             }//end th
 
         } //end head
@@ -55,16 +66,18 @@
            tr{
             background-color: $color-black;
             transition: all .4s;
-
+            border-radius: 17px;
            
                 &:hover{
                      @include media-breakpoint-up(xl){
-                        background-color: $color-grey--light;
+                        background-color: #000;
                      }
                 }
 
-
-                    border-radius: 17px;
+                @include media-breakpoint-down(lg){
+                    margin-bottom: 4rem;
+                }
+                    
  
 
 
@@ -73,8 +86,8 @@
 
             td{
                 // background-color: $color-black;
-                padding: 3rem 2rem;
-                font-size: $font-size18;
+                padding: 1.5rem 1.7rem;
+                font-size: 1.6rem;
 
 
                 @include media-breakpoint-up(xxl){
@@ -83,9 +96,8 @@
 
                 @include media-breakpoint-down(lg){
                     position: relative;
-                    padding-left: 42%; 
-                    margin: 2rem 0;
-                    border-bottom: 1px solid $color-white;
+                    padding-left: 30%; 
+                    border-bottom: 1px solid #1f1f1f;
 
                 }
 
@@ -95,16 +107,15 @@
                 }
 
                 &::before{
-                    /* Now like a table header */
                     position: absolute;
-                    /* Top/left values mimic padding */
-                    
                     left: 1rem;
                     width: 45%; 
                     padding-right: 10px; 
                     white-space: nowrap;
                 }
 
+
+                //giving values to replace th on small screen
                 @include media-breakpoint-down(lg){
                     &:nth-of-type(1):before { content: "ID :"; }
                     &:nth-of-type(2):before { content: "Name :"; }
@@ -135,18 +146,30 @@
 
         }//end body
 
-        .c-users__table-edit{
-           
-
+        .c-users__table-btn{
             @include media-breakpoint-down(lg){
-                margin: -2rem 0;
                 display: inline-block;
-                font-size: 3rem;
-                padding-left: 12rem;
+                font-size: 2rem;
+                padding-left: 1rem;
                 border-bottom: none;
-                padding-top: 1rem;
+
             
             }
+
+        }
+
+        .c-users__table-edit{
+
+            .edit-txt{
+                //hiding edit text on big screens and show it only on small screens
+                display: none;
+
+                @include media-breakpoint-down(lg){
+                    display: inline-block;
+                }
+            }
+
+
 
             @include media-breakpoint-down(sm){
                 font-size: 2.5rem;
@@ -160,14 +183,31 @@
         }
 
         .c-users__table-del{
+
+            .delete-txt{
+                //hiding delete text on big screens and show it only on small screens
+                display: none;
+                color: $color-red;
+
+                @include media-breakpoint-down(lg){
+                    display: inline-block;
+                }
+            }
+
+
+           
+
+
+            //c-users__table-del small screen
             @include media-breakpoint-down(lg){
-                margin: -2rem 0;
-                display: inline-block;
-                font-size: 3rem;
-                padding-left: 12rem;
-                border-bottom: none;
-                padding-top: 1rem;
+
+                padding-left: 20rem;
+
             
+            }
+
+            @include media-breakpoint-down(md){
+                padding-left: 13rem;
             }
 
 

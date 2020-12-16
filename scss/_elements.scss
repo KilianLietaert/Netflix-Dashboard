@@ -5,3 +5,12 @@ html {
 body {
   background-color: $color-grey;
 }
+
+a{
+  color: $color-white;
+
+  &:hover{
+    text-decoration: none;
+    color: $color-red;
+  }
+}
