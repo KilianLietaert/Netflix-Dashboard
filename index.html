@@ -21,6 +21,8 @@
     <script src="js/subscriptions_chart.js"></script>
     <script src="js/active_users.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/toplocations_geochart.js"></script>
 </head>
 <body>
     <header class="c-header">
@@ -198,8 +200,64 @@
                         <h2 class="c-home-featurecard__title">Subscriptions</h2>
                         <canvas id="myChart"></canvas>
                     </article>
-                    <article class="c-home-featurecard">
+                    <article class="c-home-featurecard d-flex flex-column align-items-center justify-content-center">
                         <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
+                        <div class="c-home-toplocations">
+                            <table class="c-home-toplocations__table">
+                                <tr>
+                                    <td><img src="img/usa.png" class="c-home-toplocations__img" alt="USA flag"></td>
+                                    <td>USA</td>
+                                    <td>65m</td>
+                                    <td>43,1%</td>
+                                </tr>
+                                <tr>  
+                                    <td><img src="img/brazil.png" class="c-home-toplocations__img" alt="Brazilian flag"></td>
+                                    <td>Brazil</td>
+                                    <td>17m</td>
+                                    <td>23,3%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/uk.png" class="c-home-toplocations__img" alt="Union Jack"></td>
+                                    <td>UK</td>
+                                    <td>14m</td>                               
+                                    <td>12%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/mexico.png" class="c-home-toplocations__img" alt="Mexican flag"></td>
+                                    <td>Mexico</td>
+                                    <td>7m</td>
+                                    <td>6%</td>
+                                </tr>
+                            </table>
+                            <table class="c-home-toplocations__table">
+                                <tr>
+                                    <td><img src="img/france.png" class="c-home-toplocations__img" alt="French flag"></td>
+                                    <td>France</td>
+                                    <td>65m</td>
+                                    <td>43,1%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/canada.png" class="c-home-toplocations__img" alt="Canadian flag"></td>
+                                    <td>Canada</td>
+                                    <td>17m</td>
+                                    <td>23,3%</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><img src="img/germany.png" class="c-home-toplocations__img" alt="German flag"></td>     
+                                    <td>Germany</td>
+                                    <td>14m</td>
+                                    <td>12%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/australia.png" class="c-home-toplocations__img" alt="Australian flag"></td>
+                                    <td>Australia</td>                                
+                                    <td>7m</td>
+                                    <td>6%</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="regions_div" style="width:100%; height:100%;" ></div>
                     </article>
                 </div>
                 <div class="col-12 col-lg-4">
