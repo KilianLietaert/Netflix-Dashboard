@@ -87,12 +87,12 @@
             <table class="c-users__table">
                 <thead class="c-users__table-head">
                   <tr>
-                    <th>ID <i class="fas fa-caret-down"></i></th>
-                    <th>Name <i class="fas fa-caret-up"></i></th>
-                    <th>E-mail <i class="fas fa-caret-down"></i></th>
-                    <th>Plan</th>
-                    <th>Country <i class="fas fa-caret-down"></i></th>
-                    <th>Joined in <i class="fas fa-caret-down"></i></th>
+                    <th data-column="id" data-order="desc">ID <i class="fas js-sort-arrow fa-caret-down"></i></th>
+                    <th data-column="firstName" data-order="desc">Name <i class="fas sort-arrow fa-caret-down"></i></th>
+                    <th data-column="email" data-order="desc">E-mail <i class="fas sort-arrow fa-caret-down"></i></th>
+                    <th data-column="plan" data-order="desc">Plan <i class="fas sort-arrow fa-caret-down"></i></th>
+                    <th data-column="address" data-order="desc">Country <i class="fas sort-arrow fa-caret-down"></i></th>
+                    <th data-column="joinedIn" data-order="desc">Joined in <i class="fas sort-arrow fa-caret-down"></i></th>
                     <th colspan="2"></th>
                   </tr>
                 </thead>
@@ -121,7 +121,7 @@
 
         <!-- pagination  -->
 
-        <div class="c-pagination">
+        <div class="c-pagination users-pagination">
           <div class="c-pagination-circle"><a class="c-pagination-arrow" href="#"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
             viewBox="0 0 16.757 30.514" transform="rotate(180)">
             <path id="PijlRechts" class="c-pagination-svg__stroke"
