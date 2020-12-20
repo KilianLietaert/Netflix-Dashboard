@@ -110,9 +110,15 @@
         }
     }
 
+
     &__input, &__select{
         border-radius: 5px;
         padding: .6rem .5rem;
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            font-size: 1.4rem;
+        }
 
         &:focus{
             outline: none;

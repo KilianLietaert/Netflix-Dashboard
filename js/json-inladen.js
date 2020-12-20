@@ -101,9 +101,51 @@ const sortJson = function () {
     })
 }
 
+// search function
+const searchTable = () => {
+    const searchBar = $("#search-input");
+    searchBar.on("keyup", () => {
+        let inputValue = searchBar.val();
+        console.log(inputValue);
+
+        const newData = searchValue(inputValue, data);
+        makeTable(newData);
+    })
+}
+
+const searchValue = (value, dataArr) => {
+    let searchedName = [];
+    for (let item of dataArr) {
+        value = value.toLowerCase();
+        const fullName = item.firstName.toLowerCase() + " " + item.lastName.toLowerCase();
+        const email = item.email.toLowerCase();
+        console.log(fullName)
+        if (fullName.includes(value) || email.includes(value)) {
+            searchedName.push(item);
+        }
+    }
+
+    return searchedName;
+}
+
+
+//filter json
+const filterTable = () => {
+    const inputId = $("#id");
+    const inputCountry = $("#country");
+    const joindStart = $("#joindin");
+    const joinedEnd = $("#enddate");
+    const btn = $(".js-filter-btn");
+    inputCountry.on("keyup", () => {
+        console.log(inputCountry.val())
+    })
+
+}
 
 
 $(document).ready( ()=> {
     jsonInladen();
     sortJson();
+    searchTable();
+    filterTable();
 });
