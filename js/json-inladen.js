@@ -1,6 +1,6 @@
 "use strict";
 
-let data;
+let data = [];
 
 //data uit json inladen
 const jsonInladen = () => {
@@ -14,8 +14,8 @@ const jsonInladen = () => {
         })
         .then(json => {
             data = json.users;
-        // console.log(data)
             makeTable(data);
+            filterTable(data);
         })
         .catch(err => {
         console.error(err)
@@ -31,8 +31,8 @@ const makeTable = json => {
     let html = "";
     for (let item of json) {
         // console.log(item);
-        const joinedIn = new Date(item.joinedIn);
-        const joinedInDate = `${joinedIn.getDate()}/${joinedIn.getMonth()}/${joinedIn.getFullYear()}`
+        const joinedIn = new Date(item.created);
+        const joinedInDate = `${joinedIn.getDate()}/${joinedIn.getMonth()}/${joinedIn.getFullYear()}`;
         html += ` <tr>
         <td>${item.id}</td>
         <td>${item.firstName + ' ' + item.lastName}</td>
@@ -52,6 +52,7 @@ const makeTable = json => {
 
     }
     tbody.innerHTML = html;
+
 }
 
 //json sorteren
@@ -130,22 +131,83 @@ const searchValue = (value, dataArr) => {
 
 
 //filter json
-const filterTable = () => {
-    const inputId = $("#id");
-    const inputCountry = $("#country");
-    const joindStart = $("#joindin");
-    const joinedEnd = $("#enddate");
-    const btn = $(".js-filter-btn");
-    inputCountry.on("keyup", () => {
-        console.log(inputCountry.val())
+const filterTable = (oData) => {
+    const inputId = document.querySelector("#id");
+    const inputCountry = document.querySelector("#country");
+    const plan = document.getElementById("plan");
+    const joindAfter = document.querySelector("#joind-after");
+    const joinedBefore = document.querySelector('#joined-before');
+    const btn = $("#filter-btn");
+
+    // console.log(oData)
+
+    $(".js-input").change(() => {
+        // orginalData = orginalData;
+        // console.log(oData)
+        $("#remove-filter").css("background-color", "#e21221");
+        data = oData;
+    })
+
+    btn.on("click", (e) => {
+        e.preventDefault();
+        
+
+        //control if the id input is greater than 0
+        if (inputId.value > 0) {
+            data = data.filter(val => val.id > inputId.value);
+        };
+
+        //control if the country input not empty and then filter
+        if(inputCountry.value !== ""){
+        data = data.filter(val => {
+            return val.address.country.toLowerCase() == inputCountry.value.toLowerCase();
+        })
+        }
+
+        //if joinedAter input not empty filter the table
+        if (joindAfter.value !== "") { 
+            data = data.filter(val => {
+                let joinedIn = new Date(val.created);
+                let inputDate = new Date(joindAfter.value)
+                    return joinedIn > inputDate;
+                })
+        }
+
+        if (joinedBefore.value !== "") { 
+            data = data.filter(val => {
+                let joinedIn = new Date(val.created);
+                let inputDate = new Date(joinedBefore.value)
+                    return joinedIn < inputDate;
+                })
+        }
+
+        //controlling if the selected item is not empty or Select and then filter
+        if (plan.value !== "" && plan.value !== "select") {
+            let option = plan.options[plan.selectedIndex].value;
+            data = data.filter(val => {
+                return val.plan.toLowerCase() == option.toLowerCase();
+            })
+       }
+
+        makeTable(data)
+        // console.log(filterdArr)
+    })
+
+    $(".js-rm-filters").on('click', () => {
+        $(".js-input").val("");
+        data = oData;
+        // console.table(data)
+        $("#remove-filter").css("background-color", "#757575");
+        makeTable(data);
     })
 
 }
+
 
 
 $(document).ready( ()=> {
     jsonInladen();
     sortJson();
     searchTable();
-    filterTable();
+
 });

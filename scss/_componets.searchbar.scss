@@ -137,10 +137,18 @@
         font-size: 2rem;
         padding: 1.2rem 2rem;
 
+        &:focus{
+            outline: none;
+        }
+
         @include media-breakpoint-down(lg){
             margin: 1rem;
             
         }
+    }//end btn
+
+    #remove-filter{
+        background-color: #757575;
     }
 
 
