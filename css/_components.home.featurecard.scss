@@ -1,0 +1,13 @@
+.c-home-featurecard {
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: $border-radius__card;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: $box-shadow__card;
+  &__title {
+    font-size: $font-size18;
+    text-align: left;
+    align-self: flex-start;
+  }
+}
