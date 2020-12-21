@@ -1,0 +1,37 @@
+.c-home-avatar {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  color: $color-white;
+  &--general {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.9rem;
+    background-color: $color-black;
+    border-bottom-left-radius: 25px;
+    box-shadow: $box-shadow__card;
+    @include media-breakpoint-down(lg) {
+      padding: 1rem;
+    }
+  }
+  &__img {
+    height: 7rem;
+    width: auto;
+    &--general {
+      @include media-breakpoint-down(lg) {
+        height: 6rem;
+      }
+    }
+  }
+  &__greeting {
+    font-weight: 400;
+    font-size: $font-size20;
+    margin: 0 0 0 2.7rem;
+    padding: 0;
+  }
+  &__message {
+    font-size: $font-size24;
+    font-weight: 700;
+  }
+}

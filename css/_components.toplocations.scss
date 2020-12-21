@@ -1,0 +1,23 @@
+.c-home-toplocations {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @include media-breakpoint-only(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__table {
+    font-size: $font-size13;
+    & tr > td {
+      width: 7rem;
+      padding-bottom: 1rem;
+    }
+  }
+  &__img {
+    width: 2rem;
+  }
+}
