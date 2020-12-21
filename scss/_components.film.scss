@@ -3,6 +3,7 @@
   border-color: #3c3c3c;
   border-radius: 10px 0px 0px 10px;
   color: white;
+  height: 39px;
   &::placeholder {
     color: white;
   }
@@ -19,7 +20,7 @@
   background-color: #262626;
   border-color: #3c3c3c;
   color: white;
-
+  height: 40px;
   border-radius: 10px;
   &::placeholder {
     color: white;
@@ -38,6 +39,7 @@
   border-color: #e21221;
   border-radius: 10px;
   color: white;
+  height: 40px;
   &::placeholder {
     color: white;
   }
@@ -55,6 +57,7 @@
   border-radius: 10px;
   color: white;
   margin-bottom: 45px;
+  
   &::placeholder {
     color: white;
   }
@@ -122,13 +125,14 @@
 
 .c-form__label {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: -4px;
+  
 }
 
 .c-form__label2 {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: -4px;
   margin-top: 29px;
   @include media-breakpoint-up(md) {
@@ -150,6 +154,7 @@
 .c-form__title {
   margin-top: 55px;
   margin-bottom: 41px;
+  
 }
 
 
@@ -181,7 +186,7 @@
 
 .c-film__input {
   color: white;
-  font-size: 50px;
+  font-size: 3.5rem;
   margin-top: 61px;
   margin-bottom: 74px;
 }
