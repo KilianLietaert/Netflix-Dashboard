@@ -1,7 +1,7 @@
 .c-users{
 
     color: $color-white;
-    margin-bottom: 9rem;
+    margin: 10rem 0;
 
     &__title{
         font-size: 3.5rem;
@@ -40,6 +40,8 @@
                 background-color: $color-black;
                 padding: 1rem 2rem;
                 font-size: $font-size18;
+                cursor: pointer;
+                user-select: none;
 
                 &:first-child{
                     border-top-left-radius: 17px;
@@ -227,3 +229,8 @@
 
     
 }// end c-users
+
+
+.users-pagination{
+    margin: 1rem auto 5rem !important;
+}

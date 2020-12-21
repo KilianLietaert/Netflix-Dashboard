@@ -110,9 +110,15 @@
         }
     }
 
+
     &__input, &__select{
         border-radius: 5px;
         padding: .6rem .5rem;
+
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            font-size: 1.4rem;
+        }
 
         &:focus{
             outline: none;
@@ -131,10 +137,18 @@
         font-size: 2rem;
         padding: 1.2rem 2rem;
 
+        &:focus{
+            outline: none;
+        }
+
         @include media-breakpoint-down(lg){
             margin: 1rem;
             
         }
+    }//end btn
+
+    #remove-filter{
+        background-color: #757575;
     }
 
 
