@@ -16,6 +16,10 @@
   }
 }
 
+.c-form__inputfilm{
+  height: 40px;
+}
+
 .c-form__input5[type="text"] {
   background-color: #262626;
   border-color: #3c3c3c;
@@ -105,10 +109,26 @@
     border-color: #e21221;
   }
   .blokjes {
+    margin-top: 6px;
     border-color: #e21221;
     border-radius: 5px;
     margin-right: 12px;
+
+    
   }
+  .btn-blokjes{
+    font-size: 15px;
+  }
+}
+
+.c-form__input{
+  &::placeholder {
+    font-size: 12px;
+  }
+}
+
+.c-film__kot{
+  margin-bottom: 114px;
 }
 
 .c-form__inputmessage[type="text"] {
@@ -126,7 +146,7 @@
 .c-form__label {
   color: white;
   font-size: 20px;
-  margin-bottom: -4px;
+  margin-bottom: -1px;
   
 }
 
@@ -267,6 +287,7 @@
   }
   h2 {
     color: white;
+    font-size: 35px;
   }
 }
 
