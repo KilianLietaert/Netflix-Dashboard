@@ -1,4 +1,4 @@
-# Groep 1 Netflix-Dashboard
+# Groep 1 Netflix Dashboard
 
 - Tester: Michel
 - Scrum master: Michel
@@ -11,6 +11,7 @@
 1. Algemeen
     1. Navigatie (moet nog responsive worden)
     2. footer
+
 2. Home
     1. Component: User Avatar 
 
@@ -53,14 +54,50 @@
 ## **Afgewerkte functionaliteit Sprint 2**
 
 1. Algemeen
+    1. User Avatar
+
+        Werd aangepast zodat het aan iedere pagina toegevoegd kon worden
+
+    2. Navigatie responsive gemaakt
+    3. Pagination statisch aangemaakt
+
 2. Home
+    1. Top 5 series / films
+
+        Deze functionaliteit is volledig afgewerkt. De lijst wordt dynamisch ingeladen. Via de toggle-button kan makkelijk gewisseld worden tussen films en series. Tijdens het laden van de series/films wanneer men op de toggle klikt, is er gezorgd voor een vloeiende overgang door middel van een fade.
+
+    2. Subscriptions
+
+        De opmaak van de subscriptions tabel is aangepast zodat die zo goed mogelijk lijkt op die in het design.
+
+    3. Active Users
+
+        Er is een donut grafiek aangemaakt om het percentage gratis en betalende gebruikers te tonen. Deze grafiek is ook gemaakt met graph.js
+
+        Er is een extra js-library toegevoegd om percentage-labels te kunnen toevoegen aan de grafiek.
+
+    4. Global Sales by Top Locations
+
+        Deze ‘Geo Graph’ is afkomstig van de Google graph library. Aan de hand van een Google API en bijhorende API-key, kunnen we een kaart renderen die het aantal klanten per land weergeeft.
+
+        Boven de map bevind zich een tabel die de landen weergeeft met de meeste klanten.
+
+    5. Netflix Server Capacity
+
+        Deze grafiek, ook wel een ‘Gauge’ genoemd, geeft de capaciteit van de netflix servers weer. Deze grafiek is gemaakt aan de hand van de Gauge.js library.
+
 3. Users Archive
-    - de users worden ingeladen uit de json en weergegevn in de table.
-    - searchbar en filterbar eerst statich gemaakt. De filterbar is een soort slidedown
-    - searchbar werkt, je kan een user zoeken via zijn naam, voornaam of email.
-    - sorteren werkt ook, je kan op een van de items in de sorteerbar klikken om de users te sorteren, ascending of descending.
-    - je kan users filteren via id (alle id’s groter dan de aangegeven id), alle users met een bepaalde plan, per land, Joined after, joined before. Je kan ook alle filter verwijderen door op de X knop te klikken.
+    1. de users worden ingeladen uit de json en weergegevn in de table.
+    2. searchbar en filterbar eerst statich gemaakt. De filterbar is een soort slidedown
+    3. searchbar werkt, je kan een user zoeken via zijn naam, voornaam of email.
+    4. sorteren werkt ook, je kan op een van de items in de sorteerbar klikken om de users te sorteren, ascending of descending.
+    5. je kan users filteren via id (alle id’s groter dan de aangegeven id), alle users met een bepaalde plan, per land, Joined after, joined before. Je kan ook alle filter verwijderen door op de X knop te klikken.
+
 4. Filter Archive
-    - De films en series worden gefilterd volgens 4 categorien namelijk films, series, all en aanbevolen met de laatste 2 die worden weergegeven door een dropdown.
-    - De filter wordt gedaan met js en bootstrap zoals gezien in de les frontend.
-    - filter werkt maar je kan maar eenmalig op elke link klikken.
+    1. De films en series worden gefilterd volgens 4 categorien namelijk films, series, all en aanbevolen met de laatste 2 die worden weergegeven door een dropdown.
+    2. De filter wordt gedaan met js en bootstrap zoals gezien in de les frontend.
+    3. filter werkt maar je kan maar eenmalig op elke link klikken.
+
+5. Detail Archive
+    1. Detail Archive is momenteel statisch maar wordt in sprint 3 met javascript gedaan.
+    2. Pagina geeft omschrijving, beoordeling, soort, afbeelding, categorien weer.
