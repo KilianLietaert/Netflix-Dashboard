@@ -1,0 +1,32 @@
+.c-server-capacity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__label {
+    font-size: $font-size20;
+    position: absolute;
+    left: 43%;
+    top: 35%;
+    @include media-breakpoint-down(md) {
+      left: 45%;
+      top: 30%;
+      font-size: $font-size30;
+    }
+    font-weight: bold;
+  }
+  &__gauge {
+    padding: 0;
+    margin: 0;
+    width: 28rem;
+    margin-left: -2.1rem;
+    margin-right: -2.1rem;
+    @include media-breakpoint-down(md) {
+      min-height: 30rem;
+      width: auto;
+    }
+    @include media-breakpoint-down(sm) {
+      min-height: 25rem;
+    }
+  }
+}

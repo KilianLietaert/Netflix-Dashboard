@@ -20,8 +20,9 @@
 @import "componets.searchbar";
 @import "components.pagination";
 @import "components.toplocations";
-@import '_components.detail.scss';
-@import '_components.archive.scss';
+@import "components.detail.scss";
+@import "components.archive.scss";
+@import "components.servercapacity";
 
 @import "objects.toggle";
 
