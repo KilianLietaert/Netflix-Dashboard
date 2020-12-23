@@ -46,6 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
     
         chart.draw(data, options);
       }
-
-      console.log(12345);
   });
