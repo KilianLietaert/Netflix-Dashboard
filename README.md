@@ -1,5 +1,4 @@
-# Netflix-Dashboard
-# Groep 1 Netflix
+# Groep 1 Netflix-Dashboard
 
 - Tester: Michel
 - Scrum master: Michel
