@@ -1,0 +1,136 @@
+{"users":[
+    {
+        "id": 1,
+        "titel": "Narcos: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Chilean drug chemist Cockroach brings his product to Colombian smuggler Pablo Escobar. DEA agent Steve Murphy joins the war on drugs in Bogota.",
+        "img": "detailnarcos"
+    
+    },
+    {
+        "id": 2,
+        "titel": "Vikings: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "56 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Ragnar and his brother, Rollo, return from a battle in the Baltic lands during which Ragnar has visions of the god Odin and his valkyries. ",
+        "img": "detailvikings"
+    
+    },
+    {
+        "id": 3,
+        "titel": "Borat",
+        "type": "Movies",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Borat Sagdiyev is a TV reporter of a popular show in Kazakhstan as Kazakhstan's sixth most famous man and a leading journalist.",
+        "img": "detailborat"
+    
+    },
+    {
+        "id": 4,
+        "titel": "The 100: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Set in an indeterminate year in the distant future, 97 years after a nuclear apocalypse has devastated the surface of Earth, all known humans are residents of merged orbiting space stations known as The Ark. ",
+        "img": "detailthe100"
+    
+    },    {
+        "id": 5,
+        "titel": "The walking dead: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Days Gone Bye, The Walking Dead Recap. Meet Rick Grimes (Andrew Lincoln), a police sheriff who wakes up from a coma only to find the world is infested with zombies.",
+        "img": "detailwalkingdead"
+    
+    },    {
+        "id": 6,
+        "titel": "El Camino",
+        "type": "Movies",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Fugitive Jesse Pinkman runs from his captors, the law, and his past.",
+        "img": "detailelcamino"
+    
+    },    {
+        "id": 7,
+        "titel": "Split",
+        "type": "Movies",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Three girls are kidnapped by a man with a diagnosed 23 distinct personalities. They must try to escape before the apparent emergence of a frightful new 24th.",
+        "img": "detailsplit"
+    
+    },    {
+        "id": 8,
+        "titel": "Ted",
+        "type": "Movies",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear, Ted or his girlfriend, Lori.",
+        "img": "detailted"
+    
+    },    {
+        "id": 9,
+        "titel": "Barbarians: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Cherusci tribal chief Segimer bristles at the increasing demands of new governor Varus. Secret lovers Thusnelda and Folkwin deal Rome a symbolic blow.",
+        "img": "detailbarbarians"
+    
+    },    {
+        "id": 10,
+        "titel": "The inmate: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.9",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Caught during a police raid, Dante is sent to a maximum-security prison in Mexico, where he's quickly initiated into a violent world run by two gangs.",
+        "img": "detailtheinmate"
+    
+    }
+]}
