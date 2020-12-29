@@ -1,0 +1,73 @@
+.c-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(15, 15, 15, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_window{
+    background-color: #000000;
+    color: $color-white;
+    font-size: 1.6rem;
+    border-radius: 2em;
+    width: 50%;
+    height: 27%;
+    min-height: 150px;
+    text-align: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include media-breakpoint-down("lg"){
+      height: 45%;
+      width: 65%;
+      padding: 0 1.4rem;
+    }
+  }
+
+  &_titel {
+    text-align: center;
+    padding-top: 1em;
+  }
+
+  &_close{
+    text-align: center;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  &_buttons{
+    padding: 2rem;
+  }
+
+  &_btn{
+    background-color: $color-red;
+    padding: .8rem;
+    margin: 0 2rem;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+
+    &:hover{
+      
+    }
+  }
+
+  #js-cancel{
+    background-color: #696969;
+  }
+
+}
+
+ 
+  .hidden {
+    display: none;
+  }

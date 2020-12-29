@@ -20,7 +20,7 @@ const maxDate = function () {
 
 }
 
-const init = () => {
+const filterInit = () => {
     const filterBtn = $(".js-filter-btn");
     const filterMenu = $(".js-filter-menu");
     filterMenu.hide();
@@ -32,8 +32,7 @@ const init = () => {
 
 
 $(function () {
-
-    init();
+    filterInit();
     maxDate();
   
   });

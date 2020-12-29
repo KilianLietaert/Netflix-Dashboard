@@ -44,15 +44,15 @@ const makeTable = json => {
           <a href="#" class="edit-txt" >Edit</a>
           <a href="#" title="Edit"><i class="fas fa-edit"></i></a>
         </td>
-        <td class="c-users__table-del c-users__table-btn">
-          <a href="#" class="delete-txt" >Delete</a>
-          <a href="#" title="Delete"><i class="fas fa-trash"></i></a>
+        <td data-userid=${item.id} class="c-users__table-del c-users__table-btn">
+          <a href="#" class="delete-txt js-showmodal" onclick="listenToDelete(); return false;"  >Delete</a>
+          <a href="#" title="Delete" class='js-showmodal' onclick="listenToDelete(); return false;" ><i class="fas fa-trash"></i></a>
         </td>
       </tr>`;
 
     }
     tbody.innerHTML = html;
-
+    
 }
 
 //json sorteren
@@ -61,7 +61,7 @@ const sortJson = function () {
         let column = $(this).data("column");
         let order = $(this).data("order");
 
-        console.log("col was clicked", column, order);
+        // console.log("col was clicked", column, order);
         // console.log(jsonData)
 
         if (order == "desc") {
@@ -107,7 +107,7 @@ const searchTable = () => {
     const searchBar = $("#search-input");
     searchBar.on("keyup", () => {
         let inputValue = searchBar.val();
-        console.log(inputValue);
+        // console.log(inputValue);
 
         const newData = searchValue(inputValue, data);
         makeTable(newData);
@@ -120,7 +120,7 @@ const searchValue = (value, dataArr) => {
         value = value.toLowerCase();
         const fullName = item.firstName.toLowerCase() + " " + item.lastName.toLowerCase();
         const email = item.email.toLowerCase();
-        console.log(fullName)
+        // console.log(fullName)
         if (fullName.includes(value) || email.includes(value)) {
             searchedName.push(item);
         }
@@ -205,9 +205,11 @@ const filterTable = (oData) => {
 
 
 
+
 $(document).ready( ()=> {
     jsonInladen();
     sortJson();
     searchTable();
-
+    
+    
 });
