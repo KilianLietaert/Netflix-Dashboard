@@ -41,8 +41,8 @@ const makeTable = json => {
         <td>${item.address.country}</td>
         <td>${joinedInDate}</td>
         <td class="c-users__table-edit c-users__table-btn">
-          <a href="#" class="edit-txt" >Edit</a>
-          <a href="#" title="Edit"><i class="fas fa-edit"></i></a>
+          <a href="users-edit.html?userid=${item.id}" class="edit-txt" >Edit</a>
+          <a href="users-edit.html?userid=${item.id}" title="Edit"><i class="fas fa-edit"></i></a>
         </td>
         <td data-userid=${item.id} class="c-users__table-del c-users__table-btn">
           <a href="#" class="delete-txt js-showmodal" onclick="listenToDelete(); return false;"  >Delete</a>

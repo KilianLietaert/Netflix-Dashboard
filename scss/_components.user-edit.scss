@@ -1,0 +1,45 @@
+.c-user{
+    background-color: $color-black;
+    color: $color-white;
+    padding: 2.3rem 3.2rem;
+    margin: 9rem 0 6.1rem;
+    border-radius: 15px;
+
+    &__title{
+        font-size: $font-size30;
+        font-weight: bold;
+    }
+
+    &__form{
+        padding: 2rem 0;
+    }
+
+    &__fgroup{
+        margin: 3rem 0;
+
+        label{
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+
+    &-input{
+        height: 4rem;
+    }
+
+    &-btn{
+        padding: 1.5rem 3.5rem;
+        background-color: $color-red;
+        color: $color-white;
+        border: none;
+        font-size: 1.6rem;
+        border-radius: 10px;
+        transition: all .3s;
+
+        &:hover{
+            color: $color-red;
+            background-color: $color-white;
+        }
+    }
+
+}
