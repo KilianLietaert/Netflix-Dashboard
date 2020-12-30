@@ -7,8 +7,13 @@
         
         margin: 2rem 0 0 2rem;
 
+        @media screen and(max-width: 1320px) {
+            margin: 2rem 0 0 7rem;
+        }
+
         @include media-breakpoint-down(lg){
             margin-bottom: 3.8rem;
+            
         }
     }
     
@@ -23,7 +28,14 @@
         border-collapse: separate;
         border-spacing: 0rem 1.8rem;
 
-
+        @media only screen and(max-width: 1320px) {
+            margin: 0 6rem;
+            width: 95%;
+        }
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            margin: 0;
+        }
 
         &-head{
 
@@ -103,8 +115,8 @@
                 }
 
                 @include media-breakpoint-down(sm){
-                    font-size: 1.6rem;
-                    padding-left: 35%;
+                    font-size: 1.2rem;
+                    padding-left: 33%;
                 }
 
                 &::before{
@@ -229,6 +241,73 @@
     
 }// end c-users
 
+//navbar in users pagina
+
+.users-header{
+    @include media-breakpoint-down(lg){
+        display: flex;
+        bottom: 0px;
+        width: 100%;
+        justify-content: center;
+        background-color: $color-black;
+        box-shadow: $box-shadow__card;
+    }
+
+    .c-nav{
+
+        & ul{
+        @include media-breakpoint-down(lg){
+            display: flex;
+            flex-direction: row;
+        }
+        }
+        
+        &-icon{
+    
+            &:hover{
+    
+                @include media-breakpoint-down(lg){
+    
+                    &:first-of-type{
+                        border-top-right-radius: 0px;
+                    }
+                    &:last-of-type{
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+            }
+    
+            &__active{
+
+                @include media-breakpoint-down(lg){
+                    border-radius: 0 0 0 0;
+                    &:first-of-type{
+                        border-top-right-radius: 0px;
+                    }
+                    &:last-of-type{
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+            }
+        }
+    
+        @include media-breakpoint-down(lg){
+            border-radius: 0 0 0 0;
+            margin-top: 0;
+            box-shadow: none;
+            margin-bottom: -10px;
+        }
+    
+    }
+    
+    .c-logo{
+
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+    }
+ 
+}
 
 .users-pagination{
     margin: 1rem auto 5rem !important;
