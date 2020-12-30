@@ -11,9 +11,10 @@ const jsonInladen = () => {
             }
             return resp.json();
         })
-        .then(data=> {
+        .then(json=> {
         // console.log(data)
-            makeTable(data);
+            data = json;
+            makeTable(json);
         })
         .catch(err => {
         console.error(err)
@@ -26,7 +27,7 @@ const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
     console.log(data.archive);
-    for (let item of data.archive) {
+    for (let item of data) {
         // console.log(item);
         html += `                            <div class="picture col-lg-2 col-md-3 col-sm-4">         
         <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
@@ -41,7 +42,7 @@ const searchTable = () => {
     const searchBar = $("#search-inputarchive");
     searchBar.on("keyup", () => {
         let inputValue = searchBar.val();
-        console.log(inputValue);
+        console.log(data);
 
         const newData = searchValue(inputValue, data);
         makeTable(newData);
@@ -50,9 +51,10 @@ const searchTable = () => {
 
 const searchValue = (value, dataArr) => {
     let searchedName = [];
+    console.log(dataArr)
     for (let item of dataArr) {
         value = value.toLowerCase();
-        const fullName = item.titelarchive.toLowerCase() + " "();
+        const fullName = item.titel.toLowerCase();
         console.log(fullName)
         if (fullName.includes(value)) {
             searchedName.push(item);
