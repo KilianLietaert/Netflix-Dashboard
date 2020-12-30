@@ -25,7 +25,7 @@ const jsonInladen = () => {
 const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
-    for (let item of data.users) {
+    for (let item of data.archive) {
         // console.log(item);
         html += `         
         <div class="row">
