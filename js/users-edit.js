@@ -8,7 +8,6 @@ const loadJson = () => {
             return resp.json();
         })
         .then(json => {
-            // data = json.users;
             getUser(json.users);
         })
         .catch(err => {
@@ -51,7 +50,7 @@ const makeForm = function (user) {
   <div class="form-group c-user__fgroup">
       <label for="user-plan">Plan</label>
       <select id="user-plan" class="form-control c-user-input form-control-lg ">
-          <option ${userPlan== "basic" ? "selected" : "" } value="basic">Basic</option>
+          <option ${userPlan == "basic" ? "selected" : "" } value="basic">Basic</option>
           <option ${userPlan == "standard" ? "selected" : "" } value="standard">Standard</option>
           <option ${userPlan == "premium" ? "selected" : "" } value="premium">Premium</option>
       </select>
