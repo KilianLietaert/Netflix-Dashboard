@@ -1,5 +1,5 @@
 "use strict";
-
+let data = [];
 
 //data uit json inladen
 const jsonInladen = () => {
@@ -25,19 +25,46 @@ const jsonInladen = () => {
 const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
-    for (let item of data.users) {
+    console.log(data.archive);
+    for (let item of data.archive) {
         // console.log(item);
-        html += `         
-        <img class="img-fluid" src="/img/narcos.png" alt="">
-        <a href="/detail2.html?id=${item.id}">Narcos</a>`;
+        html += `                            <div class="picture col-lg-2 col-md-3 col-sm-4">         
+        <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
+        <a href="/detail2.html"><p>${item.titelarchive}</p></a> </div>`;
 
     }
     elem.innerHTML = html;
 }
 
+// search function
+const searchTable = () => {
+    const searchBar = $("#search-inputarchive");
+    searchBar.on("keyup", () => {
+        let inputValue = searchBar.val();
+        console.log(inputValue);
+
+        const newData = searchValue(inputValue, data);
+        makeTable(newData);
+    })
+}
+
+const searchValue = (value, dataArr) => {
+    let searchedName = [];
+    for (let item of dataArr) {
+        value = value.toLowerCase();
+        const fullName = item.titelarchive.toLowerCase() + " "();
+        console.log(fullName)
+        if (fullName.includes(value)) {
+            searchedName.push(item);
+        }
+    }
+console.log(searchedName);
+    return searchedName;
+}
 
 
 $(document).ready( ()=> {
     jsonInladen();
+    searchTable();
     
 });
