@@ -11,7 +11,7 @@ const loadJson = () => {
             return resp.json();
         })
         .then(json => {
-            getUser(json.users);
+            getUser(json);
         })
         .catch(err => {
         console.error(err)
@@ -23,7 +23,7 @@ const loadJson = () => {
 const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
-    for (let item of data.archive) {
+    // for (let item of data.archive) {
         // console.log(item);
         html += `         
         <div class="row">
@@ -31,30 +31,30 @@ const makeTable = data => {
                 <div class="detail">
                     <div class="row">
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1"><img class="foto" src="/img/${item.img}.PNG" alt=""></div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1"><img class="foto" src="/img/${data.img}.PNG" alt=""></div>
 
                     <div class="tekst col-lg-6 col-sm-6 col-md-6 offset-lg-2">
-                        <div class=""><h1>${item.titel}</h1></div>
-                        <h3>${item.type}</h3>
+                        <div class=""><h1>${data.titel}</h1></div>
+                        <h3>${data.type}</h3>
                         <div class="sterretjes col-lg-12">
                             <div class="row">
-                                <h2>${item.beoordeling}</h2>
+                                <h2>${data.beoordeling}</h2>
                             <div class="volster"><i class="fas fa-star"></i></div>
                             <div class="volster"><i class="fas fa-star"></i></div>
                             <div class="volster"><i class="fas fa-star"></i></div>
                             <div class="volster"><i class="fas fa-star"></i></div>
                             <div class="leegster"><i class="far fa-star"></i></div>
                         </div></div>
-                        <h4>${item.duur}</h4>
+                        <h4>${data.duur}</h4>
                         <div class="knopen">
                             <div class="row col-lg-12">
-                            <div ><a class="btn btn-detail" href="">${item.categorie1}</a></div>
-                            <div ><a class="btn btn-detail" href="">${item.categorie2}</a></div>
-                            <div ><a class="btn btn-detail" href="">${item.categorie3}</a></div>
-                            <div ><a class="btn btn-detail1" href="">${item.categorie4}</a></div>
+                            <div ><a class="btn btn-detail" href="">${data.categorie1}</a></div>
+                            <div ><a class="btn btn-detail" href="">${data.categorie2}</a></div>
+                            <div ><a class="btn btn-detail" href="">${data.categorie3}</a></div>
+                            <div ><a class="btn btn-detail1" href="">${data.categorie4}</a></div>
                             </div>
                         </div>
-                        <p>${item.beschrijving}</p>
+                        <p>${data.beschrijving}</p>
                         <div class="editendelete">
                             <div class="row col-lg-12">
                             <div ><a class="btn-edit btn" href="">Edit</a></div>
@@ -67,7 +67,7 @@ const makeTable = data => {
         </div>
     </div>`;
 
-    }
+    // }
     elem.innerHTML = html;
 }
 
@@ -84,9 +84,9 @@ const getUser = function (data) {
                 return user.id == userId
             });
     
-            makeForm(userObject[0])
+            makeTable(userObject[0])
     } else {
-        makeForm("");
+        makeTable("");
     }
 
     // console.log(typeof userId);
