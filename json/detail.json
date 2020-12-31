@@ -12,7 +12,8 @@
         "beschrijving": "Chilean drug chemist Cockroach brings his product to Colombian smuggler Pablo Escobar. DEA agent Steve Murphy joins the war on drugs in Bogota.",
         "img": "detailnarcos",
         "imgarchive": "narcos",
-        "titelarchive": "Narcos"
+        "titelarchive": "Narcos",
+        "divfilter": "filterDiv series trending"
 
     
     },
@@ -29,7 +30,8 @@
         "beschrijving": "Ragnar and his brother, Rollo, return from a battle in the Baltic lands during which Ragnar has visions of the god Odin and his valkyries. ",
         "img": "detailvikings",
         "imgarchive": "vikings",
-        "titelarchive": "Vikings"
+        "titelarchive": "Vikings",
+        "divfilter": "filterDiv series trending"
     
     },
     {
@@ -45,7 +47,8 @@
         "beschrijving": "Borat Sagdiyev is a TV reporter of a popular show in Kazakhstan as Kazakhstan's sixth most famous man and a leading journalist.",
         "img": "detailborat",
         "imgarchive": "borat",
-        "titelarchive": "Borat"
+        "titelarchive": "Borat",
+        "divfilter": "filterDiv movies trending"
     
     },
     {
@@ -61,7 +64,8 @@
         "beschrijving": "Set in an indeterminate year in the distant future, 97 years after a nuclear apocalypse has devastated the surface of Earth, all known humans are residents of merged orbiting space stations known as The Ark. ",
         "img": "detailthe100",
         "imgarchive": "the100",
-        "titelarchive": "The 100"
+        "titelarchive": "The 100",
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 5,
@@ -76,7 +80,8 @@
         "beschrijving": "Days Gone Bye, The Walking Dead Recap. Meet Rick Grimes (Andrew Lincoln), a police sheriff who wakes up from a coma only to find the world is infested with zombies.",
         "img": "detailwalkingdead",
         "imgarchive": "walkingdead",
-        "titelarchive": "The walking dead"
+        "titelarchive": "The walking dead",
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 6,
@@ -91,7 +96,8 @@
         "beschrijving": "Fugitive Jesse Pinkman runs from his captors, the law, and his past.",
         "img": "detailelcamino",
         "imgarchive": "elcamino",
-        "titelarchive": "El Camino"
+        "titelarchive": "El Camino",
+        "divfilter": "filterDiv movies trending"
     
     },    {
         "id": 7,
@@ -106,7 +112,8 @@
         "beschrijving": "Three girls are kidnapped by a man with a diagnosed 23 distinct personalities. They must try to escape before the apparent emergence of a frightful new 24th.",
         "img": "detailsplit",
         "imgarchive": "split",
-        "titelarchive": "Split"
+        "titelarchive": "Split",
+        "divfilter": "filterDiv movies"
     
     },    {
         "id": 8,
@@ -121,7 +128,8 @@
         "beschrijving": "John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear, Ted or his girlfriend, Lori.",
         "img": "detailted",
         "imgarchive": "ted",
-        "titelarchive": "Ted"
+        "titelarchive": "Ted",
+        "divfilter": "filterDiv movies"
     
     },    {
         "id": 9,
@@ -136,7 +144,8 @@
         "beschrijving": "Cherusci tribal chief Segimer bristles at the increasing demands of new governor Varus. Secret lovers Thusnelda and Folkwin deal Rome a symbolic blow.",
         "img": "detailbarbarians",
         "imgarchive": "barbarians",
-        "titelarchive": "Barbarians"
+        "titelarchive": "Barbarians",
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 10,
@@ -151,7 +160,8 @@
         "beschrijving": "Caught during a police raid, Dante is sent to a maximum-security prison in Mexico, where he's quickly initiated into a violent world run by two gangs.",
         "img": "detailtheinmate",
         "imgarchive": "theinmate",
-        "titelarchive": "The inmate"
+        "titelarchive": "The inmate",
+        "divfilter": "filterDiv series trending"
     
     }
 ]
