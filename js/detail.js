@@ -77,6 +77,7 @@ const getUser = function (data) {
 
     const params = new URLSearchParams(window.location.search);
     const userId = params.get('userid');
+    console.log(userId);
     if (params.has('userid')) {
         
         const userObject = data.filter(user => {

@@ -1,197 +1,192 @@
+.pictures {
+  img {
+    width: 300px;
+  }
+  p {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 
+  h1 {
+    color: white;
+    font-size: 3.5rem;
+  }
 
-.pictures{
-    img{
-        width: 300px;
-    }
-    p{
-        color: white;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
+  ul {
+    display: flex;
+  }
 
-    h1{
-        color: white;
-        font-size: 3.5rem;
-    }
+  li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+  }
 
-    ul{
-        display: flex;
-    }
+  h2 {
+    color: white;
+    font-size: 20px;
+  }
 
-    li{
-        color: white;
-        text-decoration: none;
-        list-style-type: none;
-        font-size: 20px;
-    }
-
-    h2{
-        color: white;
-        font-size: 20px;
-    }
-
-    .search{
-        width: 192px;
-        height: 64px;
-        background-color: #151515;
-        border-radius: 15px;
-    }
+  .search {
+    width: 192px;
+    height: 64px;
+    background-color: #151515;
+    border-radius: 15px;
+  }
 }
 
-.nav{
-    margin-top: 67px;
+.nav {
+  margin-top: 67px;
+  margin-left: 115px;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 50px;
+  }
+  @include media-breakpoint-up(sm) {
+    margin-left: 0px;
+  }
+  @include media-breakpoint-up(lg) {
     margin-left: 115px;
-
-            @include media-breakpoint-up(md){
-                margin-left: 50px;
-                    }
-                    @include media-breakpoint-up(sm){
-                        margin-left: 0px;
-                            }
-                    @include media-breakpoint-up(lg){
-                        margin-left: 115px;
-                            }
-
+  }
 }
 
-.dropdown{
-    float: left;
-    overflow: hidden;
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding-bottom: 50px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  :hover {
+    color: red;
+  }
+  .dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
     color: white;
-    padding-bottom: 50px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
-    :hover{color: red;
-        ;}
-    .dropbtn{  font-size: 16px;
-        border: none;
-        outline: none;
-        color: white;
-        background-color: inherit;
-        font-family: inherit; /* Important for vertical align on mobile phones */
-        margin: 0; /* Important for vertical align on mobile phones */}
-        button:hover, h2:hover{
-            color: red;
-          }
-          .dropdown-content {
-            display: none;
-            position: absolute;
-            min-width: 160px;
-            z-index: 1;
-          }
-
-          .dropdown-content a {
-            float: none;
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-          }
-}
-.dropdown:hover .dropdown-content {
-    display: block;
   }
-
-  .dropdown-content a:hover {
+  button:hover,
+  h2:hover {
     color: red;
   }
-
-  .c-picks__link{
-      color: white;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
   }
 
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
+.dropdown-content a:hover {
+  color: red;
+}
 
-  .drop1{
-    padding-top: 10px;
+.c-picks__link {
+  color: white;
+}
 
+.drop1 {
+  padding-top: 10px;
+}
+
+.drop2 {
+  padding-top: 10px;
+}
+
+.amovies {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.bmovies {
+  margin-top: 13px;
+}
+
+.bmovies2 {
+  margin-top: 13px;
+}
+
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.c-zoekcontainer__search2 {
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 0.5rem 0;
+  height: 5rem;
+  @include media-breakpoint-up(md) {
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+  @include media-breakpoint-up(sm) {
+    margin-left: 0px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-left: 180px;
+  }
+}
+
+.c-zoekcontainer__icon2 {
+  padding: 0 1rem 0 1.5rem;
+  font-size: 2rem;
+}
+
+.c-zoekcontainer__input2 {
+  background-color: transparent;
+  padding: 1rem 0;
+  border: none;
+  color: $color-white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  width: 11rem;
+  transition: all 0.4s;
+
+  &:focus {
+    outline: none;
   }
 
-  .drop2{
-    padding-top: 10px;
-
-
-  }
-
-  .amovies{
+  &::placeholder {
+    color: $color-white;
     font-weight: 500;
-    margin-top: 10px;
   }
 
-  .bmovies{
-    margin-top: 13px;
+  &:not(:placeholder-shown) {
+    width: 18rem;
+  }
+} //end input
+
+.respons {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 360px;
+  }
 }
-
-.bmovies2{
-    margin-top: 13px;
-}
-
-
-
-
-    .c-zoekcontainer__search2{
-        background-color: $color-black;
-        display: flex;
-        align-items: center;
-        border-radius: 15px;
-        padding: .5rem 0;
-        height: 5rem;
-        @include media-breakpoint-up(md){
-            margin-left: 0px;
-            margin-bottom: 50px;
-                }
-                @include media-breakpoint-up(sm){
-                    margin-left: 0px;
-                        }
-                @include media-breakpoint-up(lg){
-                    margin-left: 180px;
-                        }
-    }
-
-
-    .c-zoekcontainer__icon2{
-        padding: 0 1rem 0 1.5rem;
-        font-size: 2rem;
-    }
-
-
-    .c-zoekcontainer__input2{
-        background-color: transparent;
-        padding: 1rem 0;
-        border: none;
-        color: $color-white;
-        font-size: 1.4rem;
-        font-weight: 500;
-        width: 11rem;
-        transition: all .4s;
-
-        &:focus{
-            outline: none;
-        }
-
-        &::placeholder{
-            color: $color-white;
-            font-weight: 500;
-        }
-
-        &:not(:placeholder-shown){
-            width: 18rem;
-        }
-
-    }//end input
-
-    .respons{
-        @include media-breakpoint-up(md){
-            margin-bottom: 360px;
-                } 
-    }
-
-
-

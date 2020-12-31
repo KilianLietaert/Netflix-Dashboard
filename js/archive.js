@@ -26,12 +26,12 @@ const jsonInladen = () => {
 const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
-    console.log(data.archive);
+    console.log(data);
     for (let item of data) {
         // console.log(item);
-        html += `                            <div class="picture ${item.divfilter} col-lg-2 col-md-3 col-sm-4">         
+        html += `<div class="picture ${item.divfilter} show col-lg-2 col-md-3 col-sm-4">         
         <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
-        <a href="/detail2.html"><p>${item.titelarchive}</p></a> </div>`;
+        <a href="/detail2.html?userid=${item.id}"><p>${item.titelarchive}</p></a> </div>`;
 
     }
     elem.innerHTML = html;
@@ -64,7 +64,6 @@ console.log(searchedName);
     return searchedName;
 }
 
-filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
@@ -127,7 +126,7 @@ $(document).ready( ()=> {
 
 document.addEventListener('DOMContentLoaded', function () {
     console.info('DOM geladen');
-    filterSelection();
-    w3AddClass();
-    w3RemoveClass();
+    // filterSelection("all");
+    // w3AddClass();
+    // w3RemoveClass();
   });
