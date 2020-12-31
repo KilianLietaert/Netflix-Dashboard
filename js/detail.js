@@ -2,8 +2,7 @@
 
 
 //data uit json inladen
-const jsonInladen = () => {
-    // $.getJSON("../json/users.json", function(){})
+const loadJson = () => {
     fetch("../json/detail.json")
         .then(resp =>{
             if (!resp.ok) {
@@ -11,9 +10,8 @@ const jsonInladen = () => {
             }
             return resp.json();
         })
-        .then(data=> {
-        // console.log(data)
-            makeTable(data);
+        .then(json => {
+            getUser(json.users);
         })
         .catch(err => {
         console.error(err)
@@ -73,9 +71,28 @@ const makeTable = data => {
     elem.innerHTML = html;
 }
 
+//user id halen uit de url en dan return een object met die user
+const getUser = function (data) {
+    // console.log(data)
 
-
-$(document).ready( ()=> {
-    jsonInladen();
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get('userid');
+    if (params.has('userid')) {
+        
+        const userObject = data.filter(user => {
+                return user.id == userId
+            });
     
-});
+            makeForm(userObject[0])
+    } else {
+        makeForm("");
+    }
+
+    // console.log(typeof userId);
+
+}
+
+
+$(function () {
+    loadJson();
+})
