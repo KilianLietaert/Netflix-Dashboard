@@ -68,7 +68,6 @@ const getPageNumber = function(data){
     
     let pageNumber = 1;
     
-    //pageNumber = document.querySelector(".c-pagination-number").getAttribute('data-pagenumber');
     console.log("pageNumber");
     console.log(pageNumber);
 
@@ -269,5 +268,5 @@ $(document).ready(() => {
     jsonInladen();
     sortJson();
     searchTable();
-
+    //showData(0);
 });
