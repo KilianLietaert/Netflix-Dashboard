@@ -152,7 +152,13 @@
     margin-left: 0px;
   }
   @include media-breakpoint-up(lg) {
-    margin-left: 180px;
+    margin-left: 105px;
+  }
+}
+
+.rooda{
+  &:hover {
+    color: red;
   }
 }
 
