@@ -140,6 +140,12 @@
 
     }
 
+    #remove-filter{
+        &:hover{
+            color: $color-white;
+        }
+    }
+
 
     &__btn{
         width: unset;
