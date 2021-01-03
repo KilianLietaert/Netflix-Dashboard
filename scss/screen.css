@@ -13099,7 +13099,6 @@ body {
 }
 
 .volledig {
-  background-image: url("/img/Background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13604,7 +13603,8 @@ body {
   /* Important for vertical align on mobile phones */
 }
 
-.dropdown button:hover, .dropdown h2:hover {
+.dropdown button:hover,
+.dropdown h2:hover {
   color: red;
 }
 
@@ -13657,6 +13657,14 @@ body {
   margin-top: 13px;
 }
 
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .c-zoekcontainer__search2 {
   background-color: #151515;
   display: -webkit-box;
@@ -13666,7 +13674,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 15px;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   height: 5rem;
 }
 
@@ -13685,8 +13693,12 @@ body {
 
 @media (min-width: 992px) {
   .c-zoekcontainer__search2 {
-    margin-left: 180px;
+    margin-left: 105px;
   }
+}
+
+.rooda:hover {
+  color: red;
 }
 
 .c-zoekcontainer__icon2 {
@@ -13702,8 +13714,8 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   width: 11rem;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .c-zoekcontainer__input2:focus {
