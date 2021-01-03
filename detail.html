@@ -1,7 +1,9 @@
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix - serie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Detail</title>
+    <script src="https://kit.fontawesome.com/61efba2fcb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="dist/screen.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
@@ -14,8 +16,9 @@
     <link rel="stylesheet" href="dist/screen.css" />
     <script src="dist/main.js"></script>
 </head>
+        
 <body>
-    <main>
+    <div class="volledig">
         <header class="c-header">
             <div class="c-logo">
                 <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
@@ -147,7 +150,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="c-nav-icon ">
+                    <li class="c-nav-icon">
                         <a class="c-nav-link" title="Archive" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="47.68" height="47.68" viewBox="0 0 47.68 47.68">
                                 <path id="Icon_material-archive" data-name="Icon material-archive"
@@ -171,137 +174,52 @@
                 </ul>
             </nav>
         </header>
-        <header>
-            <div class="row">
-              <div class="c-home-avatar--general">
-                  <img src="img/user_avatar.png" class="c-home-avatar__img c-home-avatar__img--general" alt="user image" />
-              </div>
-            </div>
-        </header>
+
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-md-12 col-sm-12 offset-lg-1">
-                    <div class="row">
+                <div class="col-12">
+                    <div class="detail">
+                        <div class="row">
 
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="c-film">
-                <h1 class="c-film__input">Input Series</h1>
-                <div class="c-film__kot ">
-                        <div class="c-contact row">
-                            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-                            <div class="col-lg-4 col-md-10 col-sm-10 c-contact__form">
-                                
-                                <form class="c-form">
-                                    <div class="form-group c-form__title2">
-                                        <label class="c-form__label" for="title">
-                                            Title
-                                        </label>
-                                        <input required type="text" class="form-control c-form__input1 " id="title" />
+                        <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1"><img class="foto" src="/img/detailnarcos.PNG" alt=""></div>
 
-                                    </div>
-                                    <div class="form-group c-form__categories">
-                                        <label class="c-form__label" for="categories" >
-                                            Add to
-                                        </label>
-                                        <input required type="text" class="form-control c-form__input5" id="categories" />
-                                    
-                                    </div>
-                                    <div class="form-group c-form__categories">
-                                        <label class="c-form__label" for="categories" >
-                                            Categories
-                                        </label>
-                                        <div class="addknopvolledig">
-                                        <input required type="text" class="form-control c-form__input" placeholder="Action" id="categories" />
-                                        <div class="addknop"><a href=""><h2>+</h2></a></div></div>
-                                
-                                    
-                                        <div class="form-control c-form__input2">
-                                            <div class="action blokjes"><a class="btn-blokjes btn" href="#drama">Action</a></div>
-                                            <div class="drugs blokjes"><a class="btn-blokjes btn" href="#drama">Drugs</a></div>
-                                            <div class="drama blokjes"><a class="btn-blokjes btn" href="#drama">Drama</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group c-form__actors">
-                                        <label class="c-form__label" for="actors">
-                                            Actors
-                                        </label>
-                                        <div class="addknopvolledig">
-                                            <input required type="text" class="form-control c-form__input" placeholder="Johny Depp" id="actors" />
-                                            <div class="addknop"><a href=""><h2>+</h2></a></div></div>
-                                        <div class="form-control c-form__input2">
-                                        <div class="drama blokjes"><a class="btn-blokjes btn" href="#drama">Johny Depp</a></div>
-                                    </div></div></div>
-                                    <div class="weg col-md-1 col-sm-1"></div>
-                                    <div class="col-lg-1 col-md-1 col-sm-1"></div>
-                                    <div class="col-lg-5 col-md-10 col-sm-10">
-                                    <div class="form-group c-form__description">
-                                        <label class="c-form__label c-form__label--message">
-                                            Description
-                                        </label>
-                                        <textarea class="form-control c-form__inputmessage" id="w3review" type="text" name="w3review" rows="5" cols="50">
-                                            </textarea>
-                                    </div>
-                                    <div class="form-group c-form__uploadcover">
-                                        <label class="c-form__label2" for="uploadcover">
-                                            Upload Cover
-                                        </label>
-                                        <div class="uploadvolledig">
-                                            <div class="form-control c-form__input3"></div>
-                                        <div class="uploadknop"><a href=""><svg class="c-form__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
-                                            <g id="upload" transform="translate(-16)">
-                                              <g id="Group_2" data-name="Group 2" transform="translate(23.968)">
-                                                <g id="Group_1" data-name="Group 1">
-                                                  <path id="Path_12" data-name="Path 12" d="M145.928,9.5,137.96.389a1.136,1.136,0,0,0-1.712,0L128.28,9.5a1.138,1.138,0,0,0,.856,1.887h4.553v14.8a1.139,1.139,0,0,0,1.138,1.138h4.553a1.139,1.139,0,0,0,1.138-1.138v-14.8h4.553a1.138,1.138,0,0,0,.856-1.887Z" transform="translate(-127.998)" fill="#fff"/>
-                                                </g>
-                                              </g>
-                                              <g id="Group_4" data-name="Group 4" transform="translate(16 25.042)">
-                                                <g id="Group_3" data-name="Group 3">
-                                                  <path id="Path_13" data-name="Path 13" d="M45.595,352v6.83H20.553V352H16v9.106a2.276,2.276,0,0,0,2.277,2.277H47.871a2.274,2.274,0,0,0,2.277-2.277V352Z" transform="translate(-16 -352)" fill="#fff"/>
-                                                </g>
-                                              </g>
-                                            </g>
-                                          </svg></a>
-                                          </div></div>
-
-                                    </div>
-                                    <div class="form-group c-form__uploadmovie">
-                                        <label class="c-form__label2" for="uploadmovie">
-                                            Upload Movie
-                                        </label>
-                                        <div class="uploadvolledig">
-                                            <div class="form-control c-form__input3"></div>
-                                            <div class="uploadknop"><a href=""><svg class="c-form__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34.148 36.424">
-                                                <g id="upload" transform="translate(-16)">
-                                                  <g id="Group_2" data-name="Group 2" transform="translate(23.968)">
-                                                    <g id="Group_1" data-name="Group 1">
-                                                      <path id="Path_12" data-name="Path 12" d="M145.928,9.5,137.96.389a1.136,1.136,0,0,0-1.712,0L128.28,9.5a1.138,1.138,0,0,0,.856,1.887h4.553v14.8a1.139,1.139,0,0,0,1.138,1.138h4.553a1.139,1.139,0,0,0,1.138-1.138v-14.8h4.553a1.138,1.138,0,0,0,.856-1.887Z" transform="translate(-127.998)" fill="#fff"/>
-                                                    </g>
-                                                  </g>
-                                                  <g id="Group_4" data-name="Group 4" transform="translate(16 25.042)">
-                                                    <g id="Group_3" data-name="Group 3">
-                                                      <path id="Path_13" data-name="Path 13" d="M45.595,352v6.83H20.553V352H16v9.106a2.276,2.276,0,0,0,2.277,2.277H47.871a2.274,2.274,0,0,0,2.277-2.277V352Z" transform="translate(-16 -352)" fill="#fff"/>
-                                                    </g>
-                                                  </g>
-                                                </g>
-                                              </svg></a>
-                                              </div></div>
-
-                                    </div>
-                                    <div class=" saveknop"><a class="btn-save btn" href="#drama">Save</a></div></div>
-                                    <div class="col-lg-1 col-md-1"></div>
-                                    
-                                </form>
+                        <div class="tekst col-lg-6 col-sm-6 col-md-6 offset-lg-2">
+                            <div class=""><h1>Narcos: S1 E1</h1></div>
+                            <h3>Series</h3>
+                            <div class="sterretjes col-lg-12">
+                                <div class="row">
+                                    <h2>8.9</h2>
+                                <div class="volster"><i class="fas fa-star"></i></div>
+                                <div class="volster"><i class="fas fa-star"></i></div>
+                                <div class="volster"><i class="fas fa-star"></i></div>
+                                <div class="volster"><i class="fas fa-star"></i></div>
+                                <div class="leegster"><i class="far fa-star"></i></div>
+                            </div></div>
+                            <h4>50 minutes - USA</h4>
+                            <div class="knopen">
+                                <div class="row col-lg-12">
+                                <div ><a class="btn btn-detail" href="">Action</a></div>
+                                <div ><a class="btn btn-detail" href="">Drama</a></div>
+                                <div ><a class="btn btn-detail" href="">Drugs</a></div>
+                                <div ><a class="btn btn-detail1" href="">Crime</a></div>
+                                </div>
+                            </div>
+                            <p>Chilean drug chemist Cockroach brings his product </br>
+                                to Colombian smuggler Pablo Escobar. DEA agent</br>
+                                Steve Murphy joins the war on drugs in Bogota.</p>
+                            <div class="editendelete">
+                                <div class="row col-lg-12">
+                                <div ><a class="btn-edit btn" href="">Edit</a></div>
+                                <div><a class="btn-delete btn" href="">Delete</a></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div></div>
-            </div></div></div>
+                </div>
+            </div>
+        </div></div>
     </main>
-    <footer class="c-footer">
-        
-        <h2 class="c-footer__rights">Netflix © 2020  All rights reserved </h2>
-        <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
-
-</footer>
+    <footer>
+    </footer></div>
 </body>
 </html>

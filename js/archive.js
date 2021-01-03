@@ -31,7 +31,7 @@ const makeTable = data => {
         // console.log(item);
         html += `<div class="picture ${item.divfilter} show col-lg-2 col-md-3 col-sm-4">         
         <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
-        <a  href="/detail2.html?userid=${item.id}"><p class="rooda">${item.titelarchive}</p></a> </div>`;
+        <a href="/detail2.html?userid=${item.id}"><p>${item.titelarchive}</p></a> </div>`;
 
     }
     elem.innerHTML = html;

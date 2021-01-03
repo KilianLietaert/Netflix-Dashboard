@@ -13,9 +13,7 @@
         "img": "detailnarcos",
         "imgarchive": "narcos",
         "titelarchive": "Narcos",
-        "divfilter": "filterDiv series trending",
-        "link": "/serie.html",
-        "background": "backgroundnarcos"
+        "divfilter": "filterDiv series trending"
 
     
     },
@@ -33,9 +31,7 @@
         "img": "detailvikings",
         "imgarchive": "vikings",
         "titelarchive": "Vikings",
-        "divfilter": "filterDiv series trending",
-        "link": "/serie.html",
-        "background": "backgroundvikings"
+        "divfilter": "filterDiv series trending"
     
     },
     {
@@ -52,9 +48,7 @@
         "img": "detailborat",
         "imgarchive": "borat",
         "titelarchive": "Borat",
-        "divfilter": "filterDiv movies trending",
-        "link": "/film.html",
-        "background": "backgroundborat"
+        "divfilter": "filterDiv movies trending"
     
     },
     {
@@ -71,9 +65,7 @@
         "img": "detailthe100",
         "imgarchive": "the100",
         "titelarchive": "The 100",
-        "divfilter": "filterDiv series",
-        "link": "/serie.html",
-        "background": "backgroundthe100"
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 5,
@@ -89,9 +81,7 @@
         "img": "detailwalkingdead",
         "imgarchive": "walkingdead",
         "titelarchive": "The walking dead",
-        "divfilter": "filterDiv series",
-        "link": "/serie.html",
-        "background": "backgroundwalkingdead"
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 6,
@@ -107,9 +97,7 @@
         "img": "detailelcamino",
         "imgarchive": "elcamino",
         "titelarchive": "El Camino",
-        "divfilter": "filterDiv movies trending",
-        "link": "/film.html",
-        "background": "backgroundelcamino"
+        "divfilter": "filterDiv movies trending"
     
     },    {
         "id": 7,
@@ -125,9 +113,7 @@
         "img": "detailsplit",
         "imgarchive": "split",
         "titelarchive": "Split",
-        "divfilter": "filterDiv movies",
-        "link": "/film.html",
-        "background": "backgroundsplit"
+        "divfilter": "filterDiv movies"
     
     },    {
         "id": 8,
@@ -143,9 +129,7 @@
         "img": "detailted",
         "imgarchive": "ted",
         "titelarchive": "Ted",
-        "divfilter": "filterDiv movies",
-        "link": "/film.html",
-        "background": "backgroundted"
+        "divfilter": "filterDiv movies"
     
     },    {
         "id": 9,
@@ -161,9 +145,7 @@
         "img": "detailbarbarians",
         "imgarchive": "barbarians",
         "titelarchive": "Barbarians",
-        "divfilter": "filterDiv series",
-        "link": "/serie.html",
-        "background": "backgroundbarbarians"
+        "divfilter": "filterDiv series"
     
     },    {
         "id": 10,
@@ -179,9 +161,7 @@
         "img": "detailtheinmate",
         "imgarchive": "theinmate",
         "titelarchive": "The inmate",
-        "divfilter": "filterDiv series trending",
-        "link": "/serie.html",
-        "background": "backgroundtheinmate"
+        "divfilter": "filterDiv series trending"
     
     }
 ]
