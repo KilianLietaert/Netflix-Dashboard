@@ -1,5 +1,7 @@
 "use strict";
-
+const perPage = 6;
+let start = 0;
+let currentIndex = 0;
 let data = [];
 
 //data uit json inladen
@@ -22,6 +24,84 @@ const jsonInladen = () => {
     })
 }
 
+const makePagination = function () { 
+    const aantalPages = Math.ceil(data.length / perPage);
+    console.log(aantalPages)
+    let htmlString = `<div class="c-pagination-circle"><a class="c-pagination-arrow js-pag-left" href="#"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+    viewBox="0 0 16.757 30.514" transform="rotate(180)">
+    <path id="PijlRechts" class="c-pagination-svg__stroke"
+        d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+        fill="none" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="3"/>       
+</svg></a></div>`;
+    for (let i = 0; i < aantalPages; i++){
+        htmlString += `<div class="c-pagination-circle js-pag-item" data-index="${i}"><a href="#"  class="c-pagination-number ">${i + 1}</a></div>`;
+    }
+
+    htmlString += `<div class="c-pagination-circle"><a href="#" class="c-pagination-arrow js-pag-right"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+    viewBox="0 0 16.757 30.514">
+    <path id="PijlRechts" class="c-pagination-svg__stroke"
+        d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+        fill="none" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="3" />
+</svg></a></div>`;
+    
+    document.querySelector('.js-users-pagination').innerHTML = htmlString;
+    pagClick();
+}
+ 
+//pagination click events
+const pagClick = function () {
+    const pagLeftArrow = document.querySelector(".js-pag-left");
+    const pagRightArrow = document.querySelector(".js-pag-right");
+    const pagItems = document.querySelectorAll(".js-pag-item");
+
+    pagItems[0].classList.add("pag-active");
+ 
+
+    //circles click
+   for (let pagItem of pagItems) {
+        pagItem.addEventListener("click", (e) => {
+            e.preventDefault();
+            currentIndex = pagItem.dataset.index * perPage;
+            start = pagItem.dataset.index * perPage;
+            console.log("bal index", pagItem.dataset.index)
+            makeTable(data);
+        })
+    }
+
+    //left arrow
+    pagLeftArrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        // console.log("right arr");
+        if (start <= 0) {
+            start = 0;
+        } else {
+            
+            start = start - perPage;
+        }
+        // console.log(start);
+        makeTable(data);
+    })
+
+    //pagination right arrow
+    pagRightArrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        // console.log("right arr");
+        if (start >= data.length - perPage) {
+            return false
+        } else {
+            
+            start = start + perPage;
+        }
+        console.log("right start", start);
+        makeTable(data);
+    });
+
+
+
+}
+
 //tabel maken in html
 const makeTable = json => {
 
@@ -29,6 +109,36 @@ const makeTable = json => {
     const tbody = document.querySelector(".js-table");
     tbody.innerHTML = "";
     let html = "";
+    // let start = 0;
+    let stop = json.length;
+    // console.log(json.length)
+
+    if (start + perPage < json.length) {
+        stop = start + perPage;
+    }
+
+    for (let i = start; i < stop; i++){
+        const joinedIn = new Date(json[i].created);
+        const joinedInDate = `${joinedIn.getDate()}/${joinedIn.getMonth()}/${joinedIn.getFullYear()}`;
+        html += ` <tr>
+        <td>${json[i].id}</td>
+        <td>${json[i].firstName + ' ' + json[i].lastName}</td>
+        <td>${json[i].email}</td>
+        <td>${json[i].plan}</td>
+        <td>${json[i].address.country}</td>
+        <td>${joinedInDate}</td>
+        <td class="c-users__table-edit c-users__table-btn">
+          <a href="users-edit.html?userid=${json[i].id}" class="edit-txt" >Edit</a>
+          <a href="users-edit.html?userid=${json[i].id}" title="Edit"><i class="fas fa-edit"></i></a>
+        </td>
+        <td data-userid=${json.id} class="c-users__table-del c-users__table-btn">
+          <a href="#" class="delete-txt js-showmodal" onclick="listenToDelete(); return false;"  >Delete</a>
+          <a href="#" title="Delete" class='js-showmodal' onclick="listenToDelete(); return false;" ><i class="fas fa-trash"></i></a>
+        </td>
+      </tr>`;
+
+    }
+    /*
     for (let item of json) {
         // console.log(item);
         const joinedIn = new Date(item.created);
@@ -50,9 +160,9 @@ const makeTable = json => {
         </td>
       </tr>`;
 
-    }
+    }*/
     tbody.innerHTML = html;
-    
+    makePagination();
 }
 
 //json sorteren
@@ -196,7 +306,8 @@ const filterTable = (oData) => {
     $(".js-rm-filters").on('click', () => {
         $(".js-input").val("");
         data = oData;
-        // console.table(data)
+        console.table(data)
+        start = 0;
         $("#remove-filter").css("background-color", "#757575");
         makeTable(data);
     })
@@ -210,6 +321,6 @@ $(document).ready( ()=> {
     jsonInladen();
     sortJson();
     searchTable();
-    
+    // makePagination();
     
 });
