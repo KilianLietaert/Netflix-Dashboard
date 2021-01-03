@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,22 +15,9 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="dist/screen.css" />
     <script src="dist/main.js"></script>
-    <script src="js/gauge.min.js"></script>
-    <script src="js/top5global.js"></script>
-    <script src="js/subscriptions_chart.js"></script>
-    <script src="js/active_users.js"></script>
-    <script src="js/toplocations_geochart.js"></script>
-    <script src="js/server-capacity.js"></script>
-    <script src="js/homebeheer_success.js"></script>
+    <script src="js/subscription_types.js"></script>
 </head>
 <body>
-    <div class="alert alert-success c-home-beheer__success c-home-beheer__verdwijn" role="alert">
-        <div class="container">
-            <div class="row">
-                <p class="col-12 col-lg-11 offset-lg-1 js-success"></p>
-            </div>
-        </div>
-      </div>
     <header class="c-header">
         <div class="c-logo">
             <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
@@ -134,8 +120,8 @@
         </div>
         <nav class="c-nav">
             <ul>
-                <li class="c-nav-icon c-nav-icon__active">
-                    <a class="c-nav-link" title="Home" href="#">
+                <li class="c-nav-icon">
+                    <a class="c-nav-link" title="Home" href="index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.757" height="41.719"
                             viewBox="0 0 34.757 41.719">
                             <path id="home"
@@ -172,8 +158,8 @@
                         </svg>
                     </a>
                 </li>
-                <li class="c-nav-icon">
-                    <a class="c-nav-link" title="Admin management" href="settings.html">
+                <li class="c-nav-icon c-nav-icon__active">
+                    <a class="c-nav-link" title="Admin management" href="#">
                         <svg id="target-customer" xmlns="http://www.w3.org/2000/svg" width="55" height="54.914"
                             viewBox="0 0 55 54.914">
                             <path id="Path_5" data-name="Path 5"
@@ -190,7 +176,7 @@
     <main>
         <header class="container u-db--6">
             <div class="row">
-                <div class="col-11 offset-1 c-home-avatar">
+                <div class="col-12 col-lg-11 offset-lg-1 c-home-avatar">
                     <img src="img/user_avatar.png" class="c-home-avatar__img" alt="user image" />
                     <h1 class="c-home-avatar__greeting">
                         Hi Kelly,
@@ -202,164 +188,202 @@
         </header>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-7 offset-lg-1">
-                    <article class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Subscriptions</h2>
-                        <canvas id="myChart"></canvas>
-                    </article>
-                    <article class="c-home-featurecard d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
-                        <div class="c-home-toplocations">
-                            <table class="c-home-toplocations__table">
-                                <tr>
-                                    <td><img src="img/usa.png" class="c-home-toplocations__img" alt="USA flag"></td>
-                                    <td>USA</td>
-                                    <td>61m</td>
-                                    <td>50,7%</td>
-                                </tr>
-                                <tr>  
-                                    <td><img src="img/brazil.png" class="c-home-toplocations__img" alt="Brazilian flag"></td>
-                                    <td>Brazil</td>
-                                    <td>15m</td>
-                                    <td>12,5%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/uk.png" class="c-home-toplocations__img" alt="Union Jack"></td>
-                                    <td>UK</td>
-                                    <td>13m</td>                               
-                                    <td>10,8%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/mexico.png" class="c-home-toplocations__img" alt="Mexican flag"></td>
-                                    <td>Mexico</td>
-                                    <td>6,7m</td>
-                                    <td>5,6%</td>
-                                </tr>
-                            </table>
-                            <table class="c-home-toplocations__table">
-                                <tr>
-                                    <td><img src="img/france.png" class="c-home-toplocations__img" alt="French flag"></td>
-                                    <td>France</td>
-                                    <td>6,7m</td>
-                                    <td>5,6%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/canada.png" class="c-home-toplocations__img" alt="Canadian flag"></td>
-                                    <td>Canada</td>
-                                    <td>6,6m</td>
-                                    <td>5,5%</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td><img src="img/germany.png" class="c-home-toplocations__img" alt="German flag"></td>     
-                                    <td>Germany</td>
-                                    <td>6,4m</td>
-                                    <td>5,3%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/australia.png" class="c-home-toplocations__img" alt="Australian flag"></td>
-                                    <td>Australia</td>                                
-                                    <td>4,9m</td>
-                                    <td>4,1%</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="regions_div" style="width:100%; height:100%;" ></div>
-                    </article>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <article class="c-home-featurecard">
-                        <div class="d-flex justify-content-between">
-                            <h2 class="c-home-featurecard__title">Top 5 global</h2>
-                            <div class="btn-group btn-group-toggle o-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
-                                    <input type="radio" name="movies_series" id="movies" autocomplete="off" checked>
-                                    Movies
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" name="movies_series" id="series" autocomplete="off"> Series
-                                </label>
-                            </div>
-                        </div>
-                        <ul class="c-hitlist">
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie1.png" class="c-hitlist__img" alt="365 Days" />
-                                    <p class="c-hitlist__title">1. 354 Days<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie2.png" class="c-hitlist__img" alt="Enola Holmes" />
-                                    <p class="c-hitlist__title">2. Enola Holmes<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie3.png" class="c-hitlist__img" alt="The Old Guard" />
-                                    <p class="c-hitlist__title">3. The Old Guard<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie4.png" class="c-hitlist__img" alt="The Social Dilemma" />
-                                    <p class="c-hitlist__title">4. The Social Dilemma<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie5.png" class="c-hitlist__img" alt="Project Power" />
-                                    <p class="c-hitlist__title">5. Project Power<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                        </ul>
-                    </article>
-                    <article class="c-home-featurecard c-active-users">
-                            <h2 class="c-home-featurecard__title">Active users</h2>
-                            <canvas id="js-activeUsers"></canvas>
-                    </article>
-                    <article class="c-home-featurecard c-server-capacity">
-                        <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
-                        <canvas class="c-server-capacity__gauge" id="foo"></canvas>
-                        <p class="js-server-label c-server-capacity__label"></p>
-                    </article>
+                <div class="col-12 col-lg-11 offset-lg-1">
+                    <div class="c-home-featurecard">
+                        <h2 class="c-home-featurecard__title c-home-beheer__title">General settings</h2>
+                        <form action="index.html">
+                            <article class="c-home-beheer--space row">
+                                <p class="c-home-beheer__onderdeel col-12">General</p>
+                                <section class="c-home-beheer col-8 offset-4">
+                                    <div class="row">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="sitetitle">Site title</label>
+                                        <input type="text" name="sitetitle" class="c-home-beheer__input col-5 col-md-3" id="sitetitle" value="Netflix" />
+                                    </div>
+                                    <br />  
+                                    <p class="c-home-beheer__tussentitel">Theme colors</p>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="primarycolor">Primary color</label>
+                                        <input type="color" name="primarycolor" class="c-home-beheer__input" id="primarycolor" value="#e21221" />
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="secondarycolor">Secondary color</label>
+                                        <input type="color" name="secondarycolor" class="c-home-beheer__input" id="secondarycolor" value="#1d1c1c" />
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="detailcolor">Detail color</label>
+                                        <input type="color" name="detailcolor" class="c-home-beheer__input" id="detailcolor" value="#777777" />
+                                    </div>
+
+                                </section>
+                            </article>
+
+                            <article class="row c-home-beheer--space u-db--6">
+                                <section class="c-home-beheer col-12 js-subs">
+                                    <div>
+                                        <p class="c-home-beheer__onderdeel">Subscriptions</p>
+                                        <div class="row">
+                                            <div class="col-4">
+                                              <div class="list-group c-settings__list-item" id="list-tab" role="tablist">
+                                                <a class="list-group-item list-group-item-action active" id="list-trial-list" data-toggle="list" href="#list-trial" role="tab" aria-controls="trial">Trial</a>
+                                                <a class="list-group-item list-group-item-action" id="list-basic-list" data-toggle="list" href="#list-basic" role="tab" aria-controls="basic">Basic</a>
+                                                <a class="list-group-item list-group-item-action" id="list-standard-list" data-toggle="list" href="#list-standard" role="tab" aria-controls="standard">Standard</a>
+                                                <a class="list-group-item list-group-item-action" id="list-premium-list" data-toggle="list" href="#list-premium" role="tab" aria-controls="premium">Premium</a>
+                                              </div>
+                                            </div>
+                                            <div class="col-8">
+                                              <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="list-trial" role="tabpanel" aria-labelledby="list-trial-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialname">Name</label>
+                                                        <input type="text" name="trialname" class="c-home-beheer__input col-5 col-md-3" id="trialname" value="Trial" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialprice">Price per month</label>
+                                                        <input type="number" name="trialprice" class="c-home-beheer__input col-2 col-xl-1" id="trialprice" value="0.00" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialscreen">Screen quality</label>
+                                                        <select name="trialscreen" id="trialscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD">SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD" selected>Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialusers">Number of users</label>
+                                                        <input type="number" name="trialusers" class="c-home-beheer__input col-2 col-xl-1" id="trialusers" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialscreenperuser">Screens per user</label>
+                                                        <input type="number" name="trialscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="trialscreenperuser" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="trial">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-basic" role="tabpanel" aria-labelledby="list-basic-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicname">Name</label>
+                                                        <input type="text" name="basicname" class="c-home-beheer__input col-5 col-md-3" id="basicname" value="Basic" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicprice">Price per month</label>
+                                                        <input type="number" name="basicprice" class="c-home-beheer__input col-2 col-xl-1" id="basicprice" value="7.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicscreen">Screen quality</label>
+                                                        <select name="basicscreen" id="basicscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD" selected >SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD">Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicusers">Number of users</label>
+                                                        <input type="number" name="basicusers" class="c-home-beheer__input col-2 col-xl-1" id="basicusers" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicscreenperuser">Screens per user</label>
+                                                        <input type="number" name="basicscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="basicscreenperuser" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="basic">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-standard" role="tabpanel" aria-labelledby="list-standard-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardname">Name</label>
+                                                        <input type="text" name="standardname" class="c-home-beheer__input col-5 col-md-3" id="standardname" value="Standard" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardprice">Price per month</label>
+                                                        <input type="number" name="standardprice" class="c-home-beheer__input col-2 col-xl-1" id="standardprice" value="11.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardscreen">Screen quality</label>
+                                                        <select name="standardscreen" id="standardscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD">SD (720x576)</option>
+                                                            <option value="HD" selected >HD (1080x1920)</option>
+                                                            <option value="UHD">Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardusers">Number of users</label>
+                                                        <input type="number" name="standardusers" class="c-home-beheer__input col-2 col-xl-1" id="standardusers" value="2" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardscreenperuser">Screens per user</label>
+                                                        <input type="number" name="standardscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="standardscreenperuser" value="2" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="standard">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-premium" role="tabpanel" aria-labelledby="list-premium-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumname">Name</label>
+                                                        <input type="text" name="premiumname" class="c-home-beheer__input col-5 col-md-3" id="premiumname" value="Premium" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumprice">Price per month</label>
+                                                        <input type="number" name="premiumprice" class="c-home-beheer__input col-2 col-xl-1" id="premiumprice" value="15.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumscreen">Screen quality</label>
+                                                        <select name="premiumscreen" id="premiumscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD" >SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD" selected >Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumusers">Number of users</label>
+                                                        <input type="number" name="premiumusers" class="c-home-beheer__input col-2 col-xl-1" id="premiumusers" value="4" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumscreenperuser">Screens per user</label>
+                                                        <input type="number" name="premiumscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="premiumscreenperuser" value="4" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="premium">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">Add new subscription</span>
+                                        <input type="text" class="c-home-beheer__input" id="addnew" />
+                                        <button class="c-home-beheer__primary c-settings__button c-settings__button--small" id="addnewbutton" >Add new</button>
+                                    </div>
+                                </section>
+                            </article>
+
+                            <article class="row">
+                                <div class="col-6 col-md-4 col-xl-3">
+                                    <input type="submit" value="Save changes" name="send" class="btn c-home-beheer__primary" />
+                                </div>
+                                <div class="col-6 col-md-4 col-xl-3">
+                                    <a href="index.html "class="btn c-home-beheer__secondary">Discard changes</a>
+                                </div>
+                            </article>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="c-footer">
+        </main>
+        <footer class="c-footer">
 
-        <h2 class="c-footer__rights">Netflix © 2020 All rights reserved </h2>
-        <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
-
-    </footer>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.js"></script>
-    <script src="node_modules/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
-</body>
-</html>
+            <h2 class="c-footer__rights">Netflix © 2020 All rights reserved </h2>
+            <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
+    
+        </footer>
+    </body>
+    </html>
