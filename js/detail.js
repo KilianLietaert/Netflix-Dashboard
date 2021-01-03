@@ -25,8 +25,7 @@ const makeTable = data => {
     let html = "";
     // for (let item of data.archive) {
         // console.log(item);
-        html += ` <div class="volledig" style="background-image:url(/img/${data.background}.png);"> 
-        <div class="container">        
+        html += `         
         <div class="row">
             <div class="col-12">
                 <div class="detail">
@@ -58,7 +57,7 @@ const makeTable = data => {
                         <p>${data.beschrijving}</p>
                         <div class="editendelete">
                             <div class="row col-lg-12">
-                            <div ><a class="btn-edit btn" href="${data.link}">Edit</a></div>
+                            <div ><a class="btn-edit btn" href="">Edit</a></div>
                             <div><a class="btn-delete btn" href="">Delete</a></div>
                             </div>
                         </div>
@@ -66,7 +65,7 @@ const makeTable = data => {
                 </div>
             </div>
         </div>
-    </div></div></div>`;
+    </div>`;
 
     // }
     elem.innerHTML = html;
