@@ -5,35 +5,40 @@ const arrMovies = [
         ranking: 1,
         info: {
             title: `365 Days`,
-            img: `movie1.png`
+            img: `movie1.png`,
+            id: 11
         }
     },
     {
         ranking: 2,
         info: {
             title: `Enola Holmes`,
-            img: `movie2.png`
+            img: `movie2.png`,
+            id: 12
         }
     },
     {
         ranking: 3,
         info: {
             title: `The Old Guard`,
-            img: `movie3.png`
+            img: `movie3.png`,
+            id: 14
         }
     },
     {
         ranking: 4,
         info: {
             title: `The Social Dilemma`,
-            img: `movie4.png`
+            img: `movie4.png`,
+            id: 13
         }
     },
     {
         ranking: 5,
         info: {
             title: `Project Power`,
-            img: `movie5.png`
+            img: `movie5.png`,
+            id: 15
         }
     }
 ];
@@ -43,35 +48,40 @@ const arrSeries = [
         ranking: 1,
         info: {
             title: `The Queen's Gambit`,
-            img: `serie1.png`
+            img: `serie1.png`,
+            id: 16
         }
     },
     {
         ranking: 2,
         info: {
             title: `The Crown`,
-            img: `serie2.png`
+            img: `serie2.png`,
+            id: 17
         }
     },
     {
         ranking: 3,
         info: {
             title: `Virgin River`,
-            img: `serie3.png`
+            img: `serie3.png`,
+            id: 18
         }
     },
     {
         ranking: 4,
         info: {
             title: `Star Trek: Discovery`,
-            img: `serie4.png`
+            img: `serie4.png`,
+            id: 19
         }
     },
     {
         ranking: 5,
         info: {
             title: `El Desorden Que Dejas`,
-            img: `serie5.png`
+            img: `serie5.png`,
+            id: 20
         }
     }
 ];
@@ -98,7 +108,7 @@ const showMedia = function(array, movieOrSerie){
             const hitlistItem = document.createElement(`li`);
             hitlistItem.classList.add(`c-hitlist__item`);
             hitlistItem.innerHTML = `
-            <a href="#" class="c-hitlist__link">
+            <a href="detail2.html?userid=${array[index].info.id}" class="c-hitlist__link">
                 <img src="img/${array[index].info.img}" class="c-hitlist__img" alt="${array[index].info.title}" />
                 <p class="c-hitlist__title">${array[index].ranking}.&nbsp; ${array[index].info.title}<span>${movieOrSerie}</span></p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514" viewBox="0 0 16.757 30.514">
