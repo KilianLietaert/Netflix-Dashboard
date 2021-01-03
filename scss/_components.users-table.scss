@@ -237,10 +237,16 @@
     } //end table
 
 
-
     
 }// end c-users
 
+.pag-active{
+    .c-pagination-number{
+
+        background-color: $color-black;
+        color: $color-white !important;
+    }
+}
 //navbar in users pagina
 
 .users-header{
