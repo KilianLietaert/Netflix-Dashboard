@@ -9,6 +9,10 @@
     padding-left: 5px;
     padding-right: 5px;
 
+    &-numbers{
+        display: inline;
+    }
+
     &-circle{
         display: flex;
         justify-content: center;
