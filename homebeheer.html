@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,22 +15,8 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="dist/screen.css" />
     <script src="dist/main.js"></script>
-    <script src="js/gauge.min.js"></script>
-    <script src="js/top5global.js"></script>
-    <script src="js/subscriptions_chart.js"></script>
-    <script src="js/active_users.js"></script>
-    <script src="js/toplocations_geochart.js"></script>
-    <script src="js/server-capacity.js"></script>
-    <script src="js/homebeheer_success.js"></script>
 </head>
 <body>
-    <div class="alert alert-success c-home-beheer__success c-home-beheer__verdwijn" role="alert">
-        <div class="container">
-            <div class="row">
-                <p class="col-12 col-lg-11 offset-lg-1 js-success"></p>
-            </div>
-        </div>
-      </div>
     <header class="c-header">
         <div class="c-logo">
             <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
@@ -135,7 +120,7 @@
         <nav class="c-nav">
             <ul>
                 <li class="c-nav-icon c-nav-icon__active">
-                    <a class="c-nav-link" title="Home" href="#">
+                    <a class="c-nav-link" title="Home" href="index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.757" height="41.719"
                             viewBox="0 0 34.757 41.719">
                             <path id="home"
@@ -190,7 +175,7 @@
     <main>
         <header class="container u-db--6">
             <div class="row">
-                <div class="col-11 offset-1 c-home-avatar">
+                <div class="col-12 col-lg-11 offset-lg-1 c-home-avatar">
                     <img src="img/user_avatar.png" class="c-home-avatar__img" alt="user image" />
                     <h1 class="c-home-avatar__greeting">
                         Hi Kelly,
@@ -202,164 +187,176 @@
         </header>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-7 offset-lg-1">
-                    <article class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title">Subscriptions</h2>
-                        <canvas id="myChart"></canvas>
-                    </article>
-                    <article class="c-home-featurecard d-flex flex-column align-items-center justify-content-center">
-                        <h2 class="c-home-featurecard__title">Global sales by top locations</h2>
-                        <div class="c-home-toplocations">
-                            <table class="c-home-toplocations__table">
-                                <tr>
-                                    <td><img src="img/usa.png" class="c-home-toplocations__img" alt="USA flag"></td>
-                                    <td>USA</td>
-                                    <td>61m</td>
-                                    <td>50,7%</td>
-                                </tr>
-                                <tr>  
-                                    <td><img src="img/brazil.png" class="c-home-toplocations__img" alt="Brazilian flag"></td>
-                                    <td>Brazil</td>
-                                    <td>15m</td>
-                                    <td>12,5%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/uk.png" class="c-home-toplocations__img" alt="Union Jack"></td>
-                                    <td>UK</td>
-                                    <td>13m</td>                               
-                                    <td>10,8%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/mexico.png" class="c-home-toplocations__img" alt="Mexican flag"></td>
-                                    <td>Mexico</td>
-                                    <td>6,7m</td>
-                                    <td>5,6%</td>
-                                </tr>
-                            </table>
-                            <table class="c-home-toplocations__table">
-                                <tr>
-                                    <td><img src="img/france.png" class="c-home-toplocations__img" alt="French flag"></td>
-                                    <td>France</td>
-                                    <td>6,7m</td>
-                                    <td>5,6%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/canada.png" class="c-home-toplocations__img" alt="Canadian flag"></td>
-                                    <td>Canada</td>
-                                    <td>6,6m</td>
-                                    <td>5,5%</td>
+                <div class="col-12 col-lg-11 offset-lg-1">
+                    <div class="c-home-featurecard">
+                        <h2 class="c-home-featurecard__title c-home-beheer__title">Dashboard settings</h2>
+                        <form action="index.html">
+                            <article class="row c-home-beheer--space">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Welcome message</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-welcome">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="welcome" id="welcome" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <input type="checkbox" name="shownotification" class="c-home-beheer__input" value="true" id="shownotification" />
+                                        <label class="c-home-beheer__label" for="shownotification">Show important notifications</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="showimage" class="c-home-beheer__input" value="true" id="showimage" checked />
+                                        <label class="c-home-beheer__label" for="showimage">Show my user image</label>
+                                    </div>
+                                </section>
+                            </article>
+                            <article class="row c-home-beheer--space">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Subscriptions chart</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-subscriptions">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="subscriptions" id="subscriptions" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <p class="c-home-beheer__tussentitel">Subscription types</p>
+                                    <div>
+                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="basic" id="basic" checked />
+                                        <span class="c-home-beheer__label">Basic subscriptions</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="standard" id="standard" checked />
+                                        <span class="c-home-beheer__label">Standard subscriptions</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="premium" id="premium" checked />
+                                        <span class="c-home-beheer__label">Premium subscriptions</span>
+                                    </div>
+                                    <br />
+                                    <p class="c-home-beheer__tussentitel">Users</p>
+                                    <div>
+                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="trial" id="trial" checked />
+                                        <span class="c-home-beheer__label">Trial users</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="subscribed" id="subscribed" checked />
+                                        <span class="c-home-beheer__label">Subscribed users</span>
+                                    </div>
                                     
-                                </tr>
-                                <tr>
-                                    <td><img src="img/germany.png" class="c-home-toplocations__img" alt="German flag"></td>     
-                                    <td>Germany</td>
-                                    <td>6,4m</td>
-                                    <td>5,3%</td>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/australia.png" class="c-home-toplocations__img" alt="Australian flag"></td>
-                                    <td>Australia</td>                                
-                                    <td>4,9m</td>
-                                    <td>4,1%</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div id="regions_div" style="width:100%; height:100%;" ></div>
-                    </article>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <article class="c-home-featurecard">
-                        <div class="d-flex justify-content-between">
-                            <h2 class="c-home-featurecard__title">Top 5 global</h2>
-                            <div class="btn-group btn-group-toggle o-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary active">
-                                    <input type="radio" name="movies_series" id="movies" autocomplete="off" checked>
-                                    Movies
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" name="movies_series" id="series" autocomplete="off"> Series
-                                </label>
-                            </div>
-                        </div>
-                        <ul class="c-hitlist">
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie1.png" class="c-hitlist__img" alt="365 Days" />
-                                    <p class="c-hitlist__title">1. 354 Days<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie2.png" class="c-hitlist__img" alt="Enola Holmes" />
-                                    <p class="c-hitlist__title">2. Enola Holmes<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie3.png" class="c-hitlist__img" alt="The Old Guard" />
-                                    <p class="c-hitlist__title">3. The Old Guard<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie4.png" class="c-hitlist__img" alt="The Social Dilemma" />
-                                    <p class="c-hitlist__title">4. The Social Dilemma<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                            <li class="c-hitlist__item"><a href="#" class="c-hitlist__link">
-                                    <img src="img/movie5.png" class="c-hitlist__img" alt="Project Power" />
-                                    <p class="c-hitlist__title">5. Project Power<span>Movie</span></p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
-                                        viewBox="0 0 16.757 30.514">
-                                        <path id="PijlRechts" class="c-hitlist__svg"
-                                            d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="3" />
-                                    </svg>
-                                </a></li>
-                        </ul>
-                    </article>
-                    <article class="c-home-featurecard c-active-users">
-                            <h2 class="c-home-featurecard__title">Active users</h2>
-                            <canvas id="js-activeUsers"></canvas>
-                    </article>
-                    <article class="c-home-featurecard c-server-capacity">
-                        <h2 class="c-home-featurecard__title">Netflix server capacity</h2>
-                        <canvas class="c-server-capacity__gauge" id="foo"></canvas>
-                        <p class="js-server-label c-server-capacity__label"></p>
-                    </article>
+                                </section>
+                            </article>
+                            <article class="row c-home-beheer--space">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Global sales map</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-map">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="map" id="map" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">show top</span>
+                                        <input type="number" name="topcountries" class="c-home-beheer__input" id="topcountries" min="0" max="10" value="8" />
+                                        <label class="c-home-beheer__label" for="topcountries">countries</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="geodata" class="c-home-beheer__input" value="geodata" id="geodata" checked />
+                                        <label class="c-home-beheer__label" for="geodata">Show geo data</label>
+                                    </div>
+                                    
+                                </section>
+                            </article>
+                            <article class="row c-home-beheer--space">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Top list</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-toplist">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="toplist" id="toplist" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin" for="topshows">show top</label>
+                                        <input type="number" name="topshows" class="c-home-beheer__input" id="topshows" min="0" max="30" value="5" />
+                                    </div>
+                                    <br />
+                                    <p class="c-home-beheer__tussentitel">Show movies or series on default</p>
+                                    <div>
+                                        <input type="radio" name="movieserie" class="c-home-beheer__input" value="movies" id="movies" checked />
+                                        <span class="c-home-beheer__label">Movies</span>
+                                        <br />
+                                        <input type="radio" name="movieserie" class="c-home-beheer__input" value="series" id="series" />
+                                        <span class="c-home-beheer__label">Series</span>
+                                    </div>     
+                                </section>
+                            </article>
+                            <article class="row c-home-beheer--space">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Active users chart</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-activeusers">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="activeusers" id="activeusers" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <p class="c-home-beheer__tussentitel">Display which users?</p>
+                                    <div>
+                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="inactive" id="inactive" />
+                                        <span class="c-home-beheer__label">Inactive users</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="trial" id="trial" checked />
+                                        <span class="c-home-beheer__label">Trial users</span>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="subscribed" id="subscribed" checked />
+                                        <span class="c-home-beheer__label">Subscribed users</span>
+                                    </div>
+                                    
+                                </section>
+                            </article>
+                            <article class="row c-home-beheer--space u-db--6">
+                                <section class="c-home-beheer col-5 col-lg-4">
+                                    <p class="c-home-beheer__onderdeel">Server capacity gauge</p>
+                                </section>
+                                <section class="c-home-beheer col-7 col-lg-8 js-capacity">
+                                    <div>
+                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="capacity" id="capacity" checked />
+                                        <span class="c-home-beheer__label">Enable</span>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">Display warning at</span>
+                                        <input type="number" name="maxcapacity" class="c-home-beheer__input" id="maxcapacity" min="0" max="100" value="75" />
+                                        <label class="c-home-beheer__label" for="maxcapacity">%</label>
+                                    </div>                                   
+                                </section>
+                            </article>
+                            <article class="row">
+                                <div class="col-6 col-md-4 col-xl-3">
+                                    <input type="submit" value="Save changes" name="send" class="btn c-home-beheer__primary" />
+                                </div>
+                                <div class="col-6 col-md-4 col-xl-3">
+                                    <a href="index.html "class="btn c-home-beheer__secondary">Discard changes</a>
+                                </div>
+                            </article>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="c-footer">
+        </main>
+        <footer class="c-footer">
 
-        <h2 class="c-footer__rights">Netflix © 2020 All rights reserved </h2>
-        <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
-
-    </footer>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.js"></script>
-    <script src="node_modules/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
-</body>
-</html>
+            <h2 class="c-footer__rights">Netflix © 2020 All rights reserved </h2>
+            <h2 class="c-footer__helpdesk ">Helpdesk & info tel +325 673 54 12</h2>
+    
+        </footer>
+        <script src="js/dashboard_beheer.js"></script>
+    </body>
+    </html>
