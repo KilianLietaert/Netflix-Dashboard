@@ -57,7 +57,7 @@ const makeTable = data => {
                         <p>${data.beschrijving}</p>
                         <div class="editendelete">
                             <div class="row col-lg-12">
-                            <div ><a class="btn-edit btn" href="">Edit</a></div>
+                            <div ><a class="btn-edit btn" href="${data.link}">Edit</a></div>
                             <div><a class="btn-delete btn" href="">Delete</a></div>
                             </div>
                         </div>
