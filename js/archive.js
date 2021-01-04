@@ -1,6 +1,6 @@
 "use strict";
 let data = [];
-const perPage = 5;
+const perPage = 12;
 let start = 0;
 let currentIndex = 0;
 
