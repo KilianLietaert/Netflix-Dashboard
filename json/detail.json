@@ -197,7 +197,9 @@
         "img": "365",
         "imgarchive": "365",
         "titelarchive": "365 Days",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/serie.html",
+        "background": "365"
     
     },    {
         "id": 12,
@@ -213,7 +215,9 @@
         "img": "enolaholmes",
         "imgarchive": "enolaholmes",
         "titelarchive": "Enola Holmes",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "enolaholmes"
     },    {
         "id": 13,
         "titel": "The Social Dilemma",
@@ -228,7 +232,9 @@
         "img": "socialdilemma",
         "imgarchive": "socialdilemma",
         "titelarchive": "The Social Dilemma",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "socialdilemma"
     },    {
         "id": 14,
         "titel": "The Old Guard",
@@ -243,7 +249,9 @@
         "img": "theoldguard",
         "imgarchive": "theoldguard",
         "titelarchive": "The Old Guard",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "theoldguard"
     },    {
         "id": 15,
         "titel": "Project Power",
@@ -258,7 +266,9 @@
         "img": "projectpower",
         "imgarchive": "projectpower",
         "titelarchive": "Project Power",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "projectpower"
     },    {
         "id": 16,
         "titel": "The Queen's Gambit: S1 E1",
@@ -273,7 +283,9 @@
         "img": "queensgambit",
         "imgarchive": "queensgambit",
         "titelarchive": "The Queen's Gambit",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "queensgambit"
     },    {
         "id": 17,
         "titel": "The Crown: S1 E1",
@@ -288,7 +300,9 @@
         "img": "thecrown",
         "imgarchive": "thecrown",
         "titelarchive": "The Crown",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "thecrown"
     },    {
         "id": 18,
         "titel": "Virgin River: S1 E1",
@@ -303,7 +317,9 @@
         "img": "virginriver",
         "imgarchive": "virginriver",
         "titelarchive": "Virgin River",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "virginriver"
     },    {
         "id": 19,
         "titel": "Star Trek Discovery: S1 E1",
@@ -318,7 +334,9 @@
         "img": "startrek",
         "imgarchive": "startrek",
         "titelarchive": "Star Trek Discovery",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "startrek"
     },    {
         "id": 20,
         "titel": "El Desorden Que Dejas: S1 E1",
@@ -333,6 +351,8 @@
         "img": "eldesordenquedeja",
         "imgarchive": "eldesordenquedeja",
         "titelarchive": "El Desorden Que Dejas",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "eldesordenquedeja"
     }
 ]
