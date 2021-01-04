@@ -10,7 +10,7 @@ const initieer = function(){
             data: [44500000, 20000000],
             borderWidth:0
         },]
-    },
+    }, 
     options: {
         segmentShowStroke: false,
         responsive: true,

@@ -1,0 +1,22 @@
+.c-settings {
+  &__button {
+    padding: 0.5rem 1rem;
+    &--small {
+      padding: 0.2rem 1rem;
+      margin-left: 1rem;
+      border-radius: 2px;
+    }
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  &__list-item {
+    font-size: $font-size13;
+    .active {
+      background-color: $color-red;
+      color: $color-white;
+      border-color: $color-red;
+    }
+  }
+}

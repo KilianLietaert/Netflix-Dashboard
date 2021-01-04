@@ -3,8 +3,10 @@
   align-items: center;
   padding-top: 3rem;
   color: $color-white;
+  position: relative;
   &--general {
     position: absolute;
+    z-index: 999;
     right: 0;
     top: 0;
     padding: 1.9rem;
@@ -33,5 +35,38 @@
   &__message {
     font-size: $font-size24;
     font-weight: 700;
+  }
+  &__btn {
+    position: absolute !important;
+    bottom: 0rem;
+    left: 1.5rem;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+    &--small {
+      bottom: 1.5rem;
+      left: 2rem;
+      @include media-breakpoint-down(lg) {
+        bottom: 0.8rem;
+        left: 1rem;
+      }
+    }
+  }
+  &__homebeheer {
+    color: $color-white;
+    font-size: $font-size20;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+    &:hover {
+      color: red;
+      transform: scale(1.5) rotate(180deg);
+    }
   }
 }

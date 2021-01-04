@@ -13,7 +13,9 @@
         "img": "detailnarcos",
         "imgarchive": "narcos",
         "titelarchive": "Narcos",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "backgroundnarcos"
 
     
     },
@@ -31,7 +33,9 @@
         "img": "detailvikings",
         "imgarchive": "vikings",
         "titelarchive": "Vikings",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "backgroundvikings"
     
     },
     {
@@ -48,7 +52,9 @@
         "img": "detailborat",
         "imgarchive": "borat",
         "titelarchive": "Borat",
-        "divfilter": "filterDiv movies trending"
+        "divfilter": "filterDiv movies trending",
+        "link": "/film.html",
+        "background": "backgroundborat"
     
     },
     {
@@ -65,7 +71,9 @@
         "img": "detailthe100",
         "imgarchive": "the100",
         "titelarchive": "The 100",
-        "divfilter": "filterDiv series"
+        "divfilter": "filterDiv series",
+        "link": "/serie.html",
+        "background": "backgroundthe100"
     
     },    {
         "id": 5,
@@ -81,7 +89,9 @@
         "img": "detailwalkingdead",
         "imgarchive": "walkingdead",
         "titelarchive": "The walking dead",
-        "divfilter": "filterDiv series"
+        "divfilter": "filterDiv series",
+        "link": "/serie.html",
+        "background": "backgroundwalkingdead"
     
     },    {
         "id": 6,
@@ -97,7 +107,9 @@
         "img": "detailelcamino",
         "imgarchive": "elcamino",
         "titelarchive": "El Camino",
-        "divfilter": "filterDiv movies trending"
+        "divfilter": "filterDiv movies trending",
+        "link": "/film.html",
+        "background": "backgroundelcamino"
     
     },    {
         "id": 7,
@@ -113,7 +125,9 @@
         "img": "detailsplit",
         "imgarchive": "split",
         "titelarchive": "Split",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "backgroundsplit"
     
     },    {
         "id": 8,
@@ -129,7 +143,9 @@
         "img": "detailted",
         "imgarchive": "ted",
         "titelarchive": "Ted",
-        "divfilter": "filterDiv movies"
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "backgroundted"
     
     },    {
         "id": 9,
@@ -145,7 +161,9 @@
         "img": "detailbarbarians",
         "imgarchive": "barbarians",
         "titelarchive": "Barbarians",
-        "divfilter": "filterDiv series"
+        "divfilter": "filterDiv series",
+        "link": "/serie.html",
+        "background": "backgroundbarbarians"
     
     },    {
         "id": 10,
@@ -161,7 +179,180 @@
         "img": "detailtheinmate",
         "imgarchive": "theinmate",
         "titelarchive": "The inmate",
-        "divfilter": "filterDiv series trending"
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "backgroundtheinmate"
     
+    },    {
+        "id": 11,
+        "titel": "365 Days",
+        "type": "Movies",
+        "beoordeling": "3.3",
+        "duur": "1h 54min",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Massimo is a member of the Sicilian Mafia family and Laura is a sales director. She does not expect that on a trip to Sicily trying to save her relationship, Massimo will kidnap her and give her 365 days to fall in love with him.",
+        "img": "365",
+        "imgarchive": "365",
+        "titelarchive": "365 Days",
+        "divfilter": "filterDiv movies",
+        "link": "/serie.html",
+        "background": "365"
+    
+    },    {
+        "id": 12,
+        "titel": "Enola Holmes",
+        "type": "Movies",
+        "beoordeling": "6.6",
+        "duur": "2h 3min",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "When Enola Holmes-Sherlock's teen sister-discovers her mother missing, she sets off to find her, becoming a super-sleuth in her own right as she outwits her famous brother and unravels a dangerous conspiracy around a mysterious young Lord.",
+        "img": "enolaholmes",
+        "imgarchive": "enolaholmes",
+        "titelarchive": "Enola Holmes",
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "enolaholmes"
+    },    {
+        "id": 13,
+        "titel": "The Social Dilemma",
+        "type": "Movies",
+        "beoordeling": "7.7",
+        "duur": "1h 34min",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Explores the dangerous human impact of social networking, with tech experts sounding the alarm on their own creations.",
+        "img": "socialdilemma",
+        "imgarchive": "socialdilemma",
+        "titelarchive": "The Social Dilemma",
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "socialdilemma"
+    },    {
+        "id": 14,
+        "titel": "The Old Guard",
+        "type": "Movies",
+        "beoordeling": "6.6",
+        "duur": "2h 5min",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "A covert team of immortal mercenaries is suddenly exposed and must now fight to keep their identity a secret just as an unexpected new member is discovered.",
+        "img": "theoldguard",
+        "imgarchive": "theoldguard",
+        "titelarchive": "The Old Guard",
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "theoldguard"
+    },    {
+        "id": 15,
+        "titel": "Project Power",
+        "type": "Movies",
+        "beoordeling": "6.0",
+        "duur": "1h 53min",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "When a pill that gives its users unpredictable superpowers for five minutes hits the streets of New Orleans, a teenage dealer and a local cop must team with an ex-soldier to take down the group responsible for its creation..",
+        "img": "projectpower",
+        "imgarchive": "projectpower",
+        "titelarchive": "Project Power",
+        "divfilter": "filterDiv movies",
+        "link": "/film.html",
+        "background": "projectpower"
+    },    {
+        "id": 16,
+        "titel": "The Queen's Gambit: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.7",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.",
+        "img": "queensgambit",
+        "imgarchive": "queensgambit",
+        "titelarchive": "The Queen's Gambit",
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "queensgambit"
+    },    {
+        "id": 17,
+        "titel": "The Crown: S1 E1",
+        "type": "Series",
+        "beoordeling": "8.7",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
+        "img": "thecrown",
+        "imgarchive": "thecrown",
+        "titelarchive": "The Crown",
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "thecrown"
+    },    {
+        "id": 18,
+        "titel": "Virgin River: S1 E1",
+        "type": "Series",
+        "beoordeling": "7.5",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "After seeing an ad for a midwife, a big-city nurse moves to the redwood forests of northern California, where she meets an intriguing man.",
+        "img": "virginriver",
+        "imgarchive": "virginriver",
+        "titelarchive": "Virgin River",
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "virginriver"
+    },    {
+        "id": 19,
+        "titel": "Star Trek Discovery: S1 E1",
+        "type": "Series",
+        "beoordeling": "7.3",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Ten years before Kirk, Spock, and the Enterprise, the USS Discovery discovers new worlds and lifeforms as one Starfleet officer learns to understand all things alien.",
+        "img": "startrek",
+        "imgarchive": "startrek",
+        "titelarchive": "Star Trek Discovery",
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "startrek"
+    },    {
+        "id": 20,
+        "titel": "El Desorden Que Dejas: S1 E1",
+        "type": "Series",
+        "beoordeling": "6.8",
+        "duur": "50 minutes - USA",
+        "categorie1": "Action",
+        "categorie2": "Drama",
+        "categorie3": "Drugs",
+        "categorie4": "Crime",
+        "beschrijving": "Caught during a police raid, Dante is sent to a maximum-security prison in Mexico, where he's quickly initiated into a violent world run by two gangs.",
+        "img": "eldesordenquedeja",
+        "imgarchive": "eldesordenquedeja",
+        "titelarchive": "El Desorden Que Dejas",
+        "divfilter": "filterDiv series trending",
+        "link": "/serie.html",
+        "background": "eldesordenquedeja"
     }
 ]

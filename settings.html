@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="dist/screen.css" />
     <script src="dist/main.js"></script>
-    <script src="js/dashboard_beheer.js"></script>
+    <script src="js/subscription_types.js"></script>
 </head>
 <body>
     <header class="c-header">
@@ -120,7 +120,7 @@
         </div>
         <nav class="c-nav">
             <ul>
-                <li class="c-nav-icon c-nav-icon__active">
+                <li class="c-nav-icon">
                     <a class="c-nav-link" title="Home" href="index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.757" height="41.719"
                             viewBox="0 0 34.757 41.719">
@@ -158,8 +158,8 @@
                         </svg>
                     </a>
                 </li>
-                <li class="c-nav-icon">
-                    <a class="c-nav-link" title="Admin management" href="settings.html">
+                <li class="c-nav-icon c-nav-icon__active">
+                    <a class="c-nav-link" title="Admin management" href="#">
                         <svg id="target-customer" xmlns="http://www.w3.org/2000/svg" width="55" height="54.914"
                             viewBox="0 0 55 54.914">
                             <path id="Path_5" data-name="Path 5"
@@ -178,6 +178,9 @@
             <div class="row">
                 <div class="col-12 col-lg-11 offset-lg-1 c-home-avatar">
                     <img src="img/user_avatar.png" class="c-home-avatar__img" alt="user image" />
+                    <button class="c-home-avatar__btn" aria-label="Dashboard settings" data-balloon-pos="down">
+                        <i class="fas fa-cog c-home-avatar__homebeheer"></i>
+                    </button>
                     <h1 class="c-home-avatar__greeting">
                         Hi Kelly,
                         <br />
@@ -190,154 +193,185 @@
             <div class="row">
                 <div class="col-12 col-lg-11 offset-lg-1">
                     <div class="c-home-featurecard">
-                        <h2 class="c-home-featurecard__title c-home-beheer__title">Dashboard settings</h2>
+                        <h2 class="c-home-featurecard__title c-home-beheer__title">General settings</h2>
                         <form action="index.html">
-                            <article class="row c-home-beheer--space">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Welcome message</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-welcome">
-                                    <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="welcome" id="welcome" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
+                            <article class="c-home-beheer--space row">
+                                <p class="c-home-beheer__onderdeel col-12">General</p>
+                                <section class="c-home-beheer col-8 offset-4">
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="sitetitle">Site title</label>
+                                        <input type="text" name="sitetitle" class="c-home-beheer__input col-5 col-md-3" id="sitetitle" value="Netflix" />
                                     </div>
-                                    <br />
-                                    <div>
-                                        <input type="checkbox" name="shownotification" class="c-home-beheer__input" value="true" id="shownotification" />
-                                        <label class="c-home-beheer__label" for="shownotification">Show important notifications</label>
+                                    <div class="row">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="sitelogo">Site logo</label>
+                                        <input type="file" name="sitelogo" class="c-home-beheer__input col-5 col-md-3" id="sitelogo" accept="image/*" />
                                     </div>
-                                    <div>
-                                        <input type="checkbox" name="showimage" class="c-home-beheer__input" value="true" id="showimage" checked />
-                                        <label class="c-home-beheer__label" for="showimage">Show my user image</label>
+                                    <br />  
+                                    <p class="c-home-beheer__tussentitel">Theme colors</p>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="primarycolor">Primary color</label>
+                                        <input type="color" name="primarycolor" class="c-home-beheer__input" id="primarycolor" value="#e21221" />
                                     </div>
-                                </section>
-                            </article>
-                            <article class="row c-home-beheer--space">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Subscriptions chart</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-subscriptions">
-                                    <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="subscriptions" id="subscriptions" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="secondarycolor">Secondary color</label>
+                                        <input type="color" name="secondarycolor" class="c-home-beheer__input" id="secondarycolor" value="#1d1c1c" />
                                     </div>
-                                    <br />
-                                    <p class="c-home-beheer__tussentitel">Subscription types</p>
-                                    <div>
-                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="basic" id="basic" checked />
-                                        <span class="c-home-beheer__label">Basic subscriptions</span>
+                                    <div class="row mb-3">
+                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="detailcolor">Detail color</label>
+                                        <input type="color" name="detailcolor" class="c-home-beheer__input" id="detailcolor" value="#777777" />
                                     </div>
-                                    <div>
-                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="standard" id="standard" checked />
-                                        <span class="c-home-beheer__label">Standard subscriptions</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="subscriptiontypes[]" class="c-home-beheer__input" value="premium" id="premium" checked />
-                                        <span class="c-home-beheer__label">Premium subscriptions</span>
-                                    </div>
-                                    <br />
-                                    <p class="c-home-beheer__tussentitel">Users</p>
-                                    <div>
-                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="trial" id="trial" checked />
-                                        <span class="c-home-beheer__label">Trial users</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="subscribed" id="subscribed" checked />
-                                        <span class="c-home-beheer__label">Subscribed users</span>
-                                    </div>
-                                    
+
                                 </section>
                             </article>
-                            <article class="row c-home-beheer--space">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Global sales map</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-map">
-                                    <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="map" id="map" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
-                                    </div>
-                                    <br />
-                                    <div>
-                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">show top</span>
-                                        <input type="number" name="topcountries" class="c-home-beheer__input" id="topcountries" min="0" max="10" value="8" />
-                                        <label class="c-home-beheer__label" for="topcountries">countries</label>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="geodata" class="c-home-beheer__input" value="geodata" id="geodata" checked />
-                                        <label class="c-home-beheer__label" for="geodata">Show geo data</label>
-                                    </div>
-                                    
-                                </section>
-                            </article>
-                            <article class="row c-home-beheer--space">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Top list</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-toplist">
-                                    <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="toplist" id="toplist" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
-                                    </div>
-                                    <br />
-                                    <div>
-                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin" for="topshows">show top</label>
-                                        <input type="number" name="topshows" class="c-home-beheer__input" id="topshows" min="0" max="30" value="5" />
-                                    </div>
-                                    <br />
-                                    <p class="c-home-beheer__tussentitel">Show movies or series on default</p>
-                                    <div>
-                                        <input type="radio" name="movieserie" class="c-home-beheer__input" value="movies" id="movies" checked />
-                                        <span class="c-home-beheer__label">Movies</span>
-                                        <br />
-                                        <input type="radio" name="movieserie" class="c-home-beheer__input" value="series" id="series" />
-                                        <span class="c-home-beheer__label">Series</span>
-                                    </div>     
-                                </section>
-                            </article>
-                            <article class="row c-home-beheer--space">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Active users chart</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-activeusers">
-                                    <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="activeusers" id="activeusers" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
-                                    </div>
-                                    <br />
-                                    <p class="c-home-beheer__tussentitel">Display which users?</p>
-                                    <div>
-                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="inactive" id="inactive" />
-                                        <span class="c-home-beheer__label">Inactive users</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="trial" id="trial" checked />
-                                        <span class="c-home-beheer__label">Trial users</span>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox" name="users[]" class="c-home-beheer__input" value="subscribed" id="subscribed" checked />
-                                        <span class="c-home-beheer__label">Subscribed users</span>
-                                    </div>
-                                    
-                                </section>
-                            </article>
+
                             <article class="row c-home-beheer--space u-db--6">
-                                <section class="c-home-beheer col-5 col-lg-4">
-                                    <p class="c-home-beheer__onderdeel">Server capacity gauge</p>
-                                </section>
-                                <section class="c-home-beheer col-7 col-lg-8 js-capacity">
+                                <section class="c-home-beheer col-12 js-subs">
                                     <div>
-                                        <input type="checkbox" name="show[]" class="c-home-beheer__input js-enable-disable" onclick="enableDisable(this)" value="capacity" id="capacity" checked />
-                                        <span class="c-home-beheer__label">Enable</span>
+                                        <p class="c-home-beheer__onderdeel">Subscriptions</p>
+                                        <div class="row">
+                                            <div class="col-4">
+                                              <div class="list-group c-settings__list-item" id="list-tab" role="tablist">
+                                                <a class="list-group-item list-group-item-action active" id="list-trial-list" data-toggle="list" href="#list-trial" role="tab" aria-controls="trial">Trial</a>
+                                                <a class="list-group-item list-group-item-action" id="list-basic-list" data-toggle="list" href="#list-basic" role="tab" aria-controls="basic">Basic</a>
+                                                <a class="list-group-item list-group-item-action" id="list-standard-list" data-toggle="list" href="#list-standard" role="tab" aria-controls="standard">Standard</a>
+                                                <a class="list-group-item list-group-item-action" id="list-premium-list" data-toggle="list" href="#list-premium" role="tab" aria-controls="premium">Premium</a>
+                                              </div>
+                                            </div>
+                                            <div class="col-8">
+                                              <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="list-trial" role="tabpanel" aria-labelledby="list-trial-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialname">Name</label>
+                                                        <input type="text" name="trialname" class="c-home-beheer__input col-5 col-md-3" id="trialname" value="Trial" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialprice">Price per month</label>
+                                                        <input type="number" name="trialprice" class="c-home-beheer__input col-2 col-xl-1" id="trialprice" value="0.00" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialscreen">Screen quality</label>
+                                                        <select name="trialscreen" id="trialscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD">SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD" selected>Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialusers">Number of users</label>
+                                                        <input type="number" name="trialusers" class="c-home-beheer__input col-2 col-xl-1" id="trialusers" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="trialscreenperuser">Screens per user</label>
+                                                        <input type="number" name="trialscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="trialscreenperuser" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="trial">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-basic" role="tabpanel" aria-labelledby="list-basic-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicname">Name</label>
+                                                        <input type="text" name="basicname" class="c-home-beheer__input col-5 col-md-3" id="basicname" value="Basic" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicprice">Price per month</label>
+                                                        <input type="number" name="basicprice" class="c-home-beheer__input col-2 col-xl-1" id="basicprice" value="7.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicscreen">Screen quality</label>
+                                                        <select name="basicscreen" id="basicscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD" selected >SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD">Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicusers">Number of users</label>
+                                                        <input type="number" name="basicusers" class="c-home-beheer__input col-2 col-xl-1" id="basicusers" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="basicscreenperuser">Screens per user</label>
+                                                        <input type="number" name="basicscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="basicscreenperuser" value="1" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="basic">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-standard" role="tabpanel" aria-labelledby="list-standard-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardname">Name</label>
+                                                        <input type="text" name="standardname" class="c-home-beheer__input col-5 col-md-3" id="standardname" value="Standard" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardprice">Price per month</label>
+                                                        <input type="number" name="standardprice" class="c-home-beheer__input col-2 col-xl-1" id="standardprice" value="11.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardscreen">Screen quality</label>
+                                                        <select name="standardscreen" id="standardscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD">SD (720x576)</option>
+                                                            <option value="HD" selected >HD (1080x1920)</option>
+                                                            <option value="UHD">Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardusers">Number of users</label>
+                                                        <input type="number" name="standardusers" class="c-home-beheer__input col-2 col-xl-1" id="standardusers" value="2" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="standardscreenperuser">Screens per user</label>
+                                                        <input type="number" name="standardscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="standardscreenperuser" value="2" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="standard">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="list-premium" role="tabpanel" aria-labelledby="list-premium-list">
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumname">Name</label>
+                                                        <input type="text" name="premiumname" class="c-home-beheer__input col-5 col-md-3" id="premiumname" value="Premium" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumprice">Price per month</label>
+                                                        <input type="number" name="premiumprice" class="c-home-beheer__input col-2 col-xl-1" id="premiumprice" value="15.99" min="0" step="0.01" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumscreen">Screen quality</label>
+                                                        <select name="premiumscreen" id="premiumscreen" class="c-home-beheer__input col-5 col-lg-4 col-xl-3">
+                                                            <option value="SD" >SD (720x576)</option>
+                                                            <option value="HD">HD (1080x1920)</option>
+                                                            <option value="UHD" selected >Ultra HD (3840x2160)</option>
+                                                          </select>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumusers">Number of users</label>
+                                                        <input type="number" name="premiumusers" class="c-home-beheer__input col-2 col-xl-1" id="premiumusers" value="4" min="1" step="1" />
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <label class="c-home-beheer__label c-home-beheer__label--switch-margin col-6 col-md-4" for="premiumscreenperuser">Screens per user</label>
+                                                        <input type="number" name="premiumscreenperuser" class="c-home-beheer__input col-2 col-xl-1" id="premiumscreenperuser" value="4" min="1" step="1" />
+                                                    </div>
+                                                    <br />
+                                                    <div class="row mb-5">
+                                                        <button class="btn c-home-beheer__primary mx-4 c-settings__button" id="delete" data-sub="premium">Delete subscription type</button>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                     </div>
                                     <br />
                                     <div>
-                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">Display warning at</span>
-                                        <input type="number" name="maxcapacity" class="c-home-beheer__input" id="maxcapacity" min="0" max="100" value="75" />
-                                        <label class="c-home-beheer__label" for="maxcapacity">%</label>
-                                    </div>                                   
+                                        <span class="c-home-beheer__label c-home-beheer__label--switch-margin">Add new subscription</span>
+                                        <input type="text" class="c-home-beheer__input" id="addnew" />
+                                        <button class="c-home-beheer__primary c-settings__button c-settings__button--small" id="addnewbutton" >Add new</button>
+                                    </div>
                                 </section>
                             </article>
+
                             <article class="row">
                                 <div class="col-6 col-md-4 col-xl-3">
                                     <input type="submit" value="Save changes" name="send" class="btn c-home-beheer__primary" />

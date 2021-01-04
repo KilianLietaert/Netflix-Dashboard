@@ -1,4 +1,7 @@
 "use strict";
+const perPage = 6;
+let start = 0;
+let currentIndex = 0;
 let data = [];
 const perPage = 12;
 let start = 0;
@@ -23,6 +26,84 @@ const jsonInladen = () => {
         .catch(err => {
         console.error(err)
     })
+}
+
+const makePagination = function () { 
+  const aantalPages = Math.ceil(data.length / perPage);
+  console.log(aantalPages)
+  let htmlString = `<div class="c-pagination-circle"><a class="c-pagination-arrow js-pag-left" href="#"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+  viewBox="0 0 16.757 30.514" transform="rotate(180)">
+  <path id="PijlRechts" class="c-pagination-svg__stroke"
+      d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+      fill="none" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="3"/>       
+</svg></a></div>`;
+  for (let i = 0; i < aantalPages; i++){
+      htmlString += `<div class="c-pagination-circle js-pag-item" data-index="${i}"><a href="#"  class="c-pagination-number ">${i + 1}</a></div>`;
+  }
+
+  htmlString += `<div class="c-pagination-circle"><a href="#" class="c-pagination-arrow js-pag-right"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+  viewBox="0 0 16.757 30.514">
+  <path id="PijlRechts" class="c-pagination-svg__stroke"
+      d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+      fill="none" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="3" />
+</svg></a></div>`;
+  
+  document.querySelector('.js-users-pagination').innerHTML = htmlString;
+  pagClick();
+}
+
+//pagination click events
+const pagClick = function () {
+  const pagLeftArrow = document.querySelector(".js-pag-left");
+  const pagRightArrow = document.querySelector(".js-pag-right");
+  const pagItems = document.querySelectorAll(".js-pag-item");
+
+  pagItems[0].classList.add("pag-active");
+
+
+  //circles click
+ for (let pagItem of pagItems) {
+      pagItem.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentIndex = pagItem.dataset.index * perPage;
+          start = pagItem.dataset.index * perPage;
+          console.log("bal index", pagItem.dataset.index)
+          makeTable(data);
+      })
+  }
+
+  //left arrow
+  pagLeftArrow.addEventListener("click", (e) => {
+      e.preventDefault();
+      // console.log("right arr");
+      if (start <= 0) {
+          start = 0;
+      } else {
+          
+          start = start - perPage;
+      }
+      // console.log(start);
+      makeTable(data);
+  })
+
+  //pagination right arrow
+  pagRightArrow.addEventListener("click", (e) => {
+      e.preventDefault();
+      // console.log("right arr");
+      if (start >= data.length - perPage) {
+          return false
+      } else {
+          
+          start = start + perPage;
+      }
+      console.log("right start", start);
+      makeTable(data);
+  });
+
+
+
 }
 
 
@@ -141,12 +222,14 @@ const makeTable = data => {
   // for (let item of data) {
     for (let i = start; i < stop; i++){
         // console.log(item);
-        html += `<div class="picture ${data[i].divfilter} show col-lg-2 col-md-3 col-sm-4">         
+
+        html += `<div class="picture ${data[i].divfilter} show col-lg-2 col-md-3 col-sm-4 col-6">         
         <img class="img-fluid" src="/img/${data[i].imgarchive}.png" alt="">
         <a href="/detail2.html?userid=${data[i].id}"><p>${data[i].titelarchive}</p></a> </div>`;
 
     }
     elem.innerHTML = html;
+
 }
 
 // search function
