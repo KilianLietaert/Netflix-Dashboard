@@ -1,5 +1,8 @@
 "use strict";
 let data = [];
+const perPage = 5;
+let start = 0;
+let currentIndex = 0;
 
 //data uit json inladen
 const jsonInladen = () => {
@@ -14,7 +17,8 @@ const jsonInladen = () => {
         .then(json=> {
         // console.log(data)
             data = json;
-            makeTable(json);
+          makeTable(json);
+          makePagination();
         })
         .catch(err => {
         console.error(err)
@@ -22,16 +26,124 @@ const jsonInladen = () => {
 }
 
 
+const makePagination = function () { 
+  const aantalPages = Math.ceil(data.length / perPage);
+  console.log(aantalPages)
+  let htmlString = `<div class="c-pagination-circle"><a class="c-pagination-arrow js-pag-left" href="#"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+  viewBox="0 0 16.757 30.514" transform="rotate(180)">
+  <path id="PijlRechts" class="c-pagination-svg__stroke"
+      d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+      fill="none" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="3"/>       
+</svg></a></div>`;
+  for (let i = 0; i < aantalPages; i++){
+      htmlString += `<div class="c-pagination-circle js-pag-item" data-index="${i}"><a href="#"  class="c-pagination-number ">${i + 1}</a></div>`;
+  }
+
+  htmlString += `<div class="c-pagination-circle"><a href="#" class="c-pagination-arrow js-pag-right"><svg class="c-pagination-svg" xmlns="http://www.w3.org/2000/svg" width="16.757" height="30.514"
+  viewBox="0 0 16.757 30.514">
+  <path id="PijlRechts" class="c-pagination-svg__stroke"
+      d="M13.5,35.271,26.636,22.136,13.5,9" transform="translate(-11.379 -6.879)"
+      fill="none" stroke-linecap="round" stroke-linejoin="round"
+      stroke-width="3" />
+</svg></a></div>`;
+  
+  document.querySelector('.js-users-pagination').innerHTML = htmlString;
+  pagClick();
+}
+
+//pagination click events
+const pagClick = function () {
+  const pagLeftArrow = document.querySelector(".js-pag-left");
+  const pagRightArrow = document.querySelector(".js-pag-right");
+  const pagItems = document.querySelectorAll(".js-pag-item");
+  const totalPages = Math.ceil(data.length / perPage);
+
+  pagItems[0].classList.add("pag-active");
+  
+  $(".js-pag-item").on("click", function (e) {
+      e.preventDefault();
+      currentIndex = $(this).data("index");
+      console.log(currentIndex);
+      $(".js-pag-item").removeClass("pag-active");
+      $(this).addClass("pag-active");
+      start = $(this).data("index") * perPage;
+      makeTable(data);
+  })
+
+
+  //left arrow
+  pagLeftArrow.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // console.log("right arr");
+      if (start <= 0) {
+          start = 0;
+      } else {
+          start = start - perPage;
+      }
+
+      if (currentIndex <= 0) {
+          currentIndex = 0;
+      } else {
+          currentIndex = currentIndex - 1;
+      }
+
+      $(".js-pag-item").removeClass("pag-active");
+      $(`.js-pag-item[data-index=${currentIndex}]`).addClass('pag-active');
+      // console.log(currentIndex);
+      makeTable(data);
+  })
+
+  //pagination right arrow
+  pagRightArrow.addEventListener("click", (e) => {
+      e.preventDefault();
+      // console.log("right arr");
+      if (start >= data.length - perPage) {
+          return false
+      } else {
+          start = start + perPage;
+      }
+
+
+      if (currentIndex > totalPages) {
+          currentIndex = totalPages;
+      } else {
+          currentIndex = currentIndex + 1;
+      }
+
+      $(".js-pag-item").removeClass("pag-active");
+      $(`.js-pag-item[data-index=${currentIndex}]`).addClass('pag-active');
+
+      // console.log("right start", currentIndex);
+      makeTable(data);
+  });
+
+
+
+}
+
+
+
 //tabel maken in html
 const makeTable = data => {
     const elem = document.getElementById('elementID');
     let html = "";
-    console.log(data);
-    for (let item of data) {
+  // console.log(data);
+  
+    let stop = data.length;
+    // console.log(json.length)
+
+    if (start + perPage < data.length) {
+        stop = start + perPage;
+  }
+  
+  // for (let item of data) {
+    for (let i = start; i < stop; i++){
         // console.log(item);
-        html += `<div class="picture ${item.divfilter} show col-lg-2 col-md-3 col-sm-4">         
-        <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
-        <a href="/detail2.html?userid=${item.id}"><p>${item.titelarchive}</p></a> </div>`;
+        html += `<div class="picture ${data[i].divfilter} show col-lg-2 col-md-3 col-sm-4">         
+        <img class="img-fluid" src="/img/${data[i].imgarchive}.png" alt="">
+        <a href="/detail2.html?userid=${data[i].id}"><p>${data[i].titelarchive}</p></a> </div>`;
 
     }
     elem.innerHTML = html;
