@@ -1,12 +1,12 @@
 "use strict";
-const perPage = 6;
+const perPage = 8;
 let start = 0;
 let currentIndex = 0;
 let data = [];
 
 //data uit json inladen
 const jsonInladen = () => {
-    // $.getJSON("../json/users.json", function(){})
+
     fetch("../json/users.json")
         .then(resp =>{
             if (!resp.ok) {
@@ -18,6 +18,7 @@ const jsonInladen = () => {
             data = json.users;
             makeTable(data);
             filterTable(data);
+            makePagination();
         })
         .catch(err => {
         console.error(err)
@@ -55,32 +56,41 @@ const pagClick = function () {
     const pagLeftArrow = document.querySelector(".js-pag-left");
     const pagRightArrow = document.querySelector(".js-pag-right");
     const pagItems = document.querySelectorAll(".js-pag-item");
+    const totalPages = Math.ceil(data.length / perPage);
 
     pagItems[0].classList.add("pag-active");
- 
+    
+    $(".js-pag-item").on("click", function (e) {
+        e.preventDefault();
+        currentIndex = $(this).data("index");
+        console.log(currentIndex);
+        $(".js-pag-item").removeClass("pag-active");
+        $(this).addClass("pag-active");
+        start = $(this).data("index") * perPage;
+        makeTable(data);
+    })
 
-    //circles click
-   for (let pagItem of pagItems) {
-        pagItem.addEventListener("click", (e) => {
-            e.preventDefault();
-            currentIndex = pagItem.dataset.index * perPage;
-            start = pagItem.dataset.index * perPage;
-            console.log("bal index", pagItem.dataset.index)
-            makeTable(data);
-        })
-    }
 
     //left arrow
     pagLeftArrow.addEventListener("click", (e) => {
         e.preventDefault();
+
         // console.log("right arr");
         if (start <= 0) {
             start = 0;
         } else {
-            
             start = start - perPage;
         }
-        // console.log(start);
+
+        if (currentIndex <= 0) {
+            currentIndex = 0;
+        } else {
+            currentIndex = currentIndex - 1;
+        }
+
+        $(".js-pag-item").removeClass("pag-active");
+        $(`.js-pag-item[data-index=${currentIndex}]`).addClass('pag-active');
+        // console.log(currentIndex);
         makeTable(data);
     })
 
@@ -91,10 +101,20 @@ const pagClick = function () {
         if (start >= data.length - perPage) {
             return false
         } else {
-            
             start = start + perPage;
         }
-        console.log("right start", start);
+
+
+        if (currentIndex > totalPages) {
+            currentIndex = totalPages;
+        } else {
+            currentIndex = currentIndex + 1;
+        }
+
+        $(".js-pag-item").removeClass("pag-active");
+        $(`.js-pag-item[data-index=${currentIndex}]`).addClass('pag-active');
+
+        // console.log("right start", currentIndex);
         makeTable(data);
     });
 
@@ -138,31 +158,9 @@ const makeTable = json => {
       </tr>`;
 
     }
-    /*
-    for (let item of json) {
-        // console.log(item);
-        const joinedIn = new Date(item.created);
-        const joinedInDate = `${joinedIn.getDate()}/${joinedIn.getMonth()}/${joinedIn.getFullYear()}`;
-        html += ` <tr>
-        <td>${item.id}</td>
-        <td>${item.firstName + ' ' + item.lastName}</td>
-        <td>${item.email}</td>
-        <td>${item.plan}</td>
-        <td>${item.address.country}</td>
-        <td>${joinedInDate}</td>
-        <td class="c-users__table-edit c-users__table-btn">
-          <a href="users-edit.html?userid=${item.id}" class="edit-txt" >Edit</a>
-          <a href="users-edit.html?userid=${item.id}" title="Edit"><i class="fas fa-edit"></i></a>
-        </td>
-        <td data-userid=${item.id} class="c-users__table-del c-users__table-btn">
-          <a href="#" class="delete-txt js-showmodal" onclick="listenToDelete(); return false;"  >Delete</a>
-          <a href="#" title="Delete" class='js-showmodal' onclick="listenToDelete(); return false;" ><i class="fas fa-trash"></i></a>
-        </td>
-      </tr>`;
 
-    }*/
     tbody.innerHTML = html;
-    makePagination();
+    
 }
 
 //json sorteren
@@ -321,6 +319,4 @@ $(document).ready( ()=> {
     jsonInladen();
     sortJson();
     searchTable();
-    // makePagination();
-    
 });
