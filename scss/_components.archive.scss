@@ -150,11 +150,15 @@
     margin-left: 0px;
     margin-bottom: 50px;
   }
+
   @include media-breakpoint-up(sm) {
     margin-left: 0px;
   }
   @include media-breakpoint-up(lg) {
     margin-left: 180px;
+  }  @include media-breakpoint-up(xs) {
+    margin-left: 0px;
+    margin-bottom: 50px;
   }
   
 }
@@ -188,8 +192,4 @@
   }
 } //end input
 
-.respons {
-  @include media-breakpoint-up(md) {
-    margin-bottom: 360px;
-  }
-}
+
