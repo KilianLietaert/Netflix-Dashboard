@@ -29,7 +29,7 @@ const makeTable = data => {
     console.log(data);
     for (let item of data) {
         // console.log(item);
-        html += `<div class="picture ${item.divfilter} show col-lg-2 col-md-3 col-sm-4">         
+        html += `<div class="picture ${item.divfilter} show col-lg-2 col-md-3 col-sm-4 col-6">         
         <img class="img-fluid" src="/img/${item.imgarchive}.png" alt="">
         <a href="/detail2.html?userid=${item.id}"><p class="rooda">${item.titelarchive}</p></a> </div>`;
 

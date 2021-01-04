@@ -48,6 +48,7 @@
   @include media-breakpoint-up(sm) {
     margin-left: 0px;
   }
+
   @include media-breakpoint-up(lg) {
     margin-left: 115px;
   }
@@ -123,6 +124,7 @@
 
 .bmovies {
   margin-top: 13px;
+  
 }
 
 .bmovies2 {
@@ -154,6 +156,7 @@
   @include media-breakpoint-up(lg) {
     margin-left: 180px;
   }
+  
 }
 
 .c-zoekcontainer__icon2 {
