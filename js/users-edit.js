@@ -62,7 +62,7 @@ const makeForm = function (user) {
     <input type="text" class="form-control c-user-input form-control-lg" value="${user.address.country}" id="user-country" placeholder="Country">
   </div>
 
-  <button type="submit" class="c-user-btn">Edit</button>`;
+  <a href="users.html" class="c-user-btn">Edit</a>`;
     
         form.innerHTML = formInhound;
         
